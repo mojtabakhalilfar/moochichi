@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 
-interface IMenu {
+export type TMenu= {
     id: number,
     title: string,
     link: string
@@ -11,7 +11,7 @@ interface IMenu {
 const Header = () => {
     const [showNavbar, setShowNavbar] = useState(false)
 
-    const menu: IMenu[] = [
+    const menu: TMenu[] = [
         { id: 1, title: "صفحه اصلی", link: "/" },
         { id: 2, title: "لوازم تحریر", link: "/stationery" },
         { id: 3, title: "دکوری خاص", link: "/special" },
@@ -92,7 +92,7 @@ const Header = () => {
         </div>
 
     return (
-        <div>
+        <div className='fixed top-0 w-full z-40 bg-white'>
             <div className='flex sm:hidden'>{HeaderMobile}</div>
             <div className='hidden sm:flex'>{HeaderDesktop}</div>
         </div>

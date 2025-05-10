@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html dir="rtl" lang="en">
       <body
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`relative antialiased pt-[150px] sm:pt-[300px]`}
         >
         <Header/>
         {children}
