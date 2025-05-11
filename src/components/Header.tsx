@@ -80,7 +80,7 @@ const Header = () => {
                     ))}
                 </div>
                 <div>
-                    <button className='flex items-center bg-white opacity-10 rounded-[35px] p-2'>
+                    <button className='flex items-center backdrop-brightness-0 backdrop-opacity-10 rounded-[35px] p-2'>
                         <img src="/assets/icons/24-support.png" alt="" />
                         <span className='text-white'>
                             ارتباط با مجموعه
