@@ -3,9 +3,10 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { TMenu } from '../Header'
+import ProductHome from './ProductHome'
 
 
-type TMostPopular = {
+export type TMostPopular = {
     id: number,
     title: string,
     image: string,
@@ -45,8 +46,8 @@ const Mostpopular = () => {
                             key={item.id}
                             onClick={() => setClicked(item.id)}
                             className={`whitespace-nowrap px-4 py-2 text-[14px] rounded-[43px] transition-all duration-200 ${clicked === item.id
-                                    ? "bg-[#ff6687] text-white"
-                                    : "bg-transparent text-[#a89c9f]"
+                                ? "bg-[#ff6687] text-white"
+                                : "bg-transparent text-[#a89c9f]"
                                 }`}
                         >
                             {item.title}
@@ -56,21 +57,8 @@ const Mostpopular = () => {
                 <div className='grid grid-cols-2 gap-4 my-4 sm:flex items-center justify-around'>
                     {
                         mostpopular.map((items, index) => (
-                            <div className={`${index > 3 ? "hidden sm:flex" : "flex"} flex-col bg-[fff8fd] rounded-[11.31px]`} key={items.id}>
-                                <Link href={`product${items.id}`}>
-
-                                    <img className='w-[156px] h-[140px] sm:w-[220px] sm:h-[223px] rounded-[5.6px] sm:rounded-[8px]' src={items.image} alt={items.title} />
-                                </Link>
-                                <span className='text-[14px] text-[#2d2728] my-2'>{items.title}</span>
-                                <div className='flex justify-between'>
-                                    <button>
-                                        <img className='' src="/assets/icons/shopping-cart.png" alt="" />
-                                    </button>
-                                    <div className='text-[12px] font-medium flex flex-col'>
-                                        <span>{items.finalPrice.toLocaleString()} ت</span>
-                                        <span className='text-[10px] text-[#a89c9f] my-1'>{items.firstPrice.toLocaleString()} ت</span>
-                                    </div>
-                                </div>
+                            <div className={`${index > 3 ? "hidden sm:flex" : "flex"}`}>
+                                <ProductHome title={items.title} id={items.id} key={items.id} finalPrice={items.finalPrice} firstPrice={items.firstPrice} image={items.image} />
                             </div>
                         ))
                     }
