@@ -16,28 +16,31 @@ const Article = () => {
         { id: 3, image: "/assets/article/image3.png", title: "مزایای خرید اینترنتی لوازم تحریر", tags: ["دسته بندی: آموزشی"] },
     ]
     return (
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center my-12'>
             <div className='flex flex-col items-center w-[90%] space-y-8'>
                 <span className='font-semibold text-[18px] text-[#2d2728]'>مقالات آموزشی موچیچی</span>
-                <div>
+                <div className='space-y-5 sm:space-y-0 sm:space-x-5  flex flex-col sm:flex-row items-center'>
                     {
                         article.map((items)=>(
-                            <Link href={`articles/article${items.id}`}>
-                                <img src={items.image} alt={items.title} />
-                                <span>{items.title}</span>
-                                <div>
-                                    <div>
+                            <Link className='space-y-5' href={`articles/article${items.id}`}>
+                                <img className='rounded-[14px] w-[342px] sm:w-[353px] h-[218px]' src={items.image} alt={items.title} />
+                                <span className='font-medium text-[18px] text-[#2d2728] px-4'>{items.title}</span>
+                                <div className='flex justify-between px-4'>
+                                    <div className='text-[14px] text-[#a89c9f] '>
+                                        {/* <span>دسته بندی: </span> */}
                                         {items.tags.map((tag)=>(
                                             <span>{tag}</span>
                                         ))}
                                     </div>
-                                    <img src="/assets/icons/arrow-left.png" alt="" />
+                                    <img className='' src="/assets/icons/arrow-left.png" alt="" />
                                 </div>
                             </Link>
                         ))
                     }
                 </div>
+                <button className='text-[14px] font-medium text-white bg-[#ff6687] px-20 py-4 rounded-[43px] mt-4'>مقالات بیشتر</button>
             </div>
+
         </div>
     )
 }
