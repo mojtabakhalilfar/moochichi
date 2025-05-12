@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html dir="rtl" lang="en">
       <body
-        className={`relative antialiased pt-[150px] sm:pt-[300px]`}
+        className={`relative antialiased pt-[150px] sm:pt-[220px]`}
         >
         <Header/>
         {children}
