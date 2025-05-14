@@ -24,11 +24,11 @@ const Sort = ({ className }: { className: React.ReactNode }) => {
             </button>
             {
               listOfSort.map((item) => (
-                <span className={`${item.id == selected ? show?"hidden":"flex" : "hidden"}  sm:hidden  absolute sm:static top-0 right-10`}>{item.title}</span>
+                <span className={`${item.id == selected ? show?"hidden":"flex" : "hidden"} text-nowrap sm:hidden  absolute sm:static top-0 right-10`}>{item.title}</span>
               ))
             }
           <div className='flex flex-col sm:flex-row  absolute sm:static top-4 right-0 bg-amber-50 sm:bg-none'>
-            <span className='hidden sm:flex'>مرتب سازی :  </span>
+            <span className='hidden sm:flex text-nowrap'>مرتب سازی :  </span>
             <div className={`${show?"flex":"hidden"} sm:flex flex-col sm:flex-row items-center`}>
             {
               listOfSort.map((item, index) => (
