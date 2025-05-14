@@ -31,7 +31,7 @@ const PI_Image = () => {
   }
 
   return (
-    <div className='flex flex-col sm:flex-row-reverse items-center justify-center w-full h-auto space-y-2 space-x-2 '>
+    <div className='flex flex-col sm:flex-row-reverse items-center justify-center w-full h-auto space-y-2 mb-4 sm:ml-4'>
       <div className='w-[342px] sm:w-[533px] aspect-square relative flex items-center justify-center'>
         <img className='w-full h-full rounded-[24px]' src={images[selected].image} alt="" />
         <div className='absolute top-[5%] right-3 flex flex-col items-center justify-center space-y-2'>
@@ -44,7 +44,7 @@ const PI_Image = () => {
           }
         </div>
       </div>
-      <div className='w-full sm:w-auto flex sm:flex-col items-center space-x-1 sm:space-x-0 sm:space-y-1 justify-center'>
+      <div className=' h-full flex sm:flex-col items-center space-x-1 sm:space-x-0 sm:space-y-1 justify-evenly sm:px-4'>
         {/* <button>
           <img className='h-6 w-6 hidden sm:flex' src="/assets/icons/arrow-square-down.png" alt="" />
         </button> */}
