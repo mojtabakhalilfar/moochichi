@@ -15,19 +15,19 @@ const Sort = ({ className }: { className: React.ReactNode }) => {
     { id: 6, title: "منتخب" },
   ]
   return (
-    <div className={`${className} flex items-center justify-between`}>
+    <div className={`${className} flex items-center justify-between relative`}>
       <div className='w-[85%] flex items-center justify-between'>
-        <div className='flex '>
+        <div className='flex items-center'>
           <div className={`flex ${show?"flex-col":"flex-row"} sm:flex-row items-center`}>
-            <button className='w-4 h-4' onClick={()=>setShow(!show)}>
+            <button className='w-4 h-4 absolute sm:static top-0 right-5' onClick={()=>setShow(!show)}>
               <img className='w-full h-full' src="/assets/icons/sort.png" alt="" />
             </button>
             {
               listOfSort.map((item) => (
-                <span className={`${item.id == selected ? show?"hidden":"flex" : "hidden"}  sm:hidden`}>{item.title}</span>
+                <span className={`${item.id == selected ? show?"hidden":"flex" : "hidden"}  sm:hidden  absolute sm:static top-0 right-10`}>{item.title}</span>
               ))
             }
-          <div className='flex flex-col sm:flex-row'>
+          <div className='flex flex-col sm:flex-row  absolute sm:static top-4 right-0 bg-amber-50 sm:bg-none'>
             <span className='hidden sm:flex'>مرتب سازی :  </span>
             <div className={`${show?"flex":"hidden"} sm:flex flex-col sm:flex-row items-center`}>
             {
