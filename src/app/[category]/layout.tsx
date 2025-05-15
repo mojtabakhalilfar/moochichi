@@ -8,7 +8,7 @@ const layout = ({
 }>) => {
     return (
         <div className='flex items-center justify-center'>
-            <div className='w-[90%] flex flex-col items-center justify-center'>
+            <div className='w-[95%] flex flex-col items-center justify-center'>
                 <Routess />
                 {children}
 

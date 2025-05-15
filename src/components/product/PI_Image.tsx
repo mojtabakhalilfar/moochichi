@@ -44,7 +44,7 @@ const PI_Image = () => {
           }
         </div>
       </div>
-      <div className=' h-full flex sm:flex-col items-center space-x-1 sm:space-x-0 sm:space-y-1 justify-evenly sm:px-4'>
+      <div className=' h-full flex sm:flex-col items-center space-x-1 sm:space-x-0 sm:space-y-1 justify-evenly sm:px-4 sm:py-[10%]'>
         {/* <button>
           <img className='h-6 w-6 hidden sm:flex' src="/assets/icons/arrow-square-down.png" alt="" />
         </button> */}
