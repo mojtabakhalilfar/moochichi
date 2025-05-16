@@ -1,8 +1,9 @@
 import React from 'react'
+import FormComment from './FormComment'
 
 export default function Comments() {
     return (
-        <div className='flex flex-col items-center w-full px-3 sm:px-10'>
+        <div className='flex flex-col items-center w-full px-3 sm:px-10 space-y-4'>
             <div className='flex items-center justify-between w-full'>
                 <div className='flex items-start space-x-1'>
                     <img className='w-5 h-5' src="/assets/icons/grape2.png" alt="" />
@@ -14,6 +15,7 @@ export default function Comments() {
                     <img className='w-24 h-4' src="/assets/icons/stars.png" alt="" />
                 </div>
             </div>
+            <FormComment/>
         </div>
     )
 }
