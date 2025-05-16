@@ -1,7 +1,10 @@
 
 import AboutProduct from '@/components/product/AboutProduct'
+import Comments from '@/components/product/Comments'
 import Navar from '@/components/product/Navar'
 import PInformation from '@/components/product/PInformation'
+import RelatedProduct from '@/components/product/RelatedProduct'
+import Page from '@/components/Products/Tesst'
 import ProductDescription from '@/components/Products/Tesst'
 import React from 'react'
 
@@ -12,7 +15,10 @@ const page = () => {
         <PInformation/>
         <Navar />
         <AboutProduct/>
+        <RelatedProduct/>
+        <Comments/>
         {/* <ProductDescription /> */}
+        <Page />
       </div>
     </div>
   )

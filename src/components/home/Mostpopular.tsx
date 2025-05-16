@@ -40,7 +40,7 @@ const Mostpopular = () => {
         <div className='flex flex-col justify-center items-center my-8 w-full'>
             <div className='flex flex-col justify-center items-center w-full'>
                 <span className='font-semibold text-[18px] text-[#2d2728] my-4'>محبوب ترین مرتبط</span>
-                <div className="rounded-[49px] bg-[#fff0f7] w-[90%] sm:w-[60%] px-2 py-1 overflow-x-auto flex items-center space-x-2 scrollbar-hide">
+                <div className="rounded-[49px] bg-[#fff0f7] w-[90%] sm:w-[60%] px-2 py-1 overflow-x-auto scrollbar-hide flex items-center space-x-2 ">
                     {menu.map((item) => (
                         <button
                             key={item.id}

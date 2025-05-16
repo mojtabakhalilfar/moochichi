@@ -52,3 +52,12 @@ input[type='range'].range-slider {
   background: transparent;
   height: 0;
 }
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
