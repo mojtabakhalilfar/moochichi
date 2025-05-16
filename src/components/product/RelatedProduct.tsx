@@ -14,10 +14,10 @@ const RelatedProduct = () => {
     return (
         <div className='flex flex-col items-center w-full h-auto my-12'>
             <h2 className='font-semibold text-[18px] sm:text-[24px] text-[#2d2728] my-4'>محصولات مرتبط</h2>
-            <div className='flex items-center overflow-x-auto w-full space-x-2'>
+            <div className='flex items-center sm:justify-center overflow-x-auto w-full space-x-2'>
                 {
                     mostpopular.map((items, index) => (
-                        <div  key={items.id} className={`${index > 5 ? "hidden sm:flex" : "flex"} whitespace-nowrap flex-shrink-0`}>
+                        <div  key={items.id} className={`${index > 4 ? "hidden sm:flex" : "flex"} whitespace-nowrap flex-shrink-0`}>
                             <ProductHome title={items.title} id={items.id} finalPrice={items.finalPrice} firstPrice={items.firstPrice} image={items.image} />
                         </div>
                     ))

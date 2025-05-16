@@ -18,7 +18,7 @@ const page = () => {
         <RelatedProduct/>
         <Comments/>
         {/* <ProductDescription /> */}
-        <Page />
+        {/* <Page /> */}
       </div>
     </div>
   )
