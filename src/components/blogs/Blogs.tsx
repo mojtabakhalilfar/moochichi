@@ -137,7 +137,7 @@
 import React, { useEffect, useState } from "react";
 import BlogInBlogs from "./BlogInBlogs";
 
-type TBlog = {
+export type TBlog = {
     id: number;
     title: string;
     tags: Array<string>;
