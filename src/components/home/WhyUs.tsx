@@ -1,15 +1,15 @@
 import React from 'react'
 
-type TContact = {
+export type TContact = {
     id: number,
     title: string,
     description: string,
     icon: string
 }
 
-const Contact = () => {
+const WhyUs = ({ children }: { children: React.ReactNode | null }) => {
 
-    const contact:TContact[] = [
+    const contact: TContact[] = [
         { id: 1, title: "پرداخت امن با درگاه امن", description: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله است", icon: "/assets/icons/wallet-check.png" },
         { id: 2, title: "رضایت بیش از ۱ میلیون مشتری", description: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله است", icon: "/assets/icons/grammerly.png" },
         { id: 3, title: "پشتیبانی ۲۴ ساعته", description: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله است", icon: "/assets/icons/24-support.png" },
@@ -24,25 +24,39 @@ const Contact = () => {
                 </div>
                 <div className='flex flex-col sm:flex-row items-center justify-around space-y-10 sm:space-y-0 sm:space-x-10 py-4 w-full'>
                     {
-                        contact.map((items)=>(
-                            <div key={items.id} className='flex flex-col items-start space-y-2 sm:w-[90%]'>
-                                <img className='w-[35px] aspect-square' src={items.icon} alt={items.title} />
-                                <span className='font-semibold text-[16px] text-[#121111]'>{items.title}</span>
-                                <p className='text-[13px] text-[#929292]'>{items.description}</p>
-                            </div>
+                        contact.map((items) => (
+                            <Answer key={items.id} icon={items.icon} title={items.title} description={items.description} id={items.id} />
+                            // <div key={items.id} className='flex flex-col items-start space-y-2 sm:w-[90%]'>
+                            //     <img className='w-[35px] aspect-square' src={items.icon} alt={items.title} />
+                            //     <span className='font-semibold text-[16px] text-[#121111]'>{items.title}</span>
+                            //     <p className='text-[13px] text-[#929292]'>{items.description}</p>
+                            // </div>
                         ))
                     }
                 </div>
             </div>
+            <div className='flex items-center justify-center w-[70%]'>
+                {children && <div>{children}</div>}
+            </div>
             <div className='bg-[#ff6687] w-full sm:w-[80%] sm:rounded-[71px] h-auto text-white flex flex-col sm:flex-row sm:justify-between sm:px-7 items-center space-y-2 py-6 mt-4'>
-                    <p className='font-semibold text-[16px]'>اینستاگرام مارو دنبال کن حتما ...</p>
-                    <div className='flex space-x-2'>
-                        <span className='text-[20px] font-semibold'>Moochichi_shop</span>
-                        <img src="/assets/icons/instagram.png" alt="" />
-                    </div>
+                <p className='font-semibold text-[16px]'>اینستاگرام مارو دنبال کن حتما ...</p>
+                <div className='flex space-x-2'>
+                    <span className='text-[20px] font-semibold'>Moochichi_shop</span>
+                    <img src="/assets/icons/instagram.png" alt="" />
+                </div>
             </div>
         </div>
     )
 }
 
-export default Contact
+export default WhyUs
+
+export const Answer = ({ id, icon, title, description }: { id: number, icon: string, title: string, description: string }) => {
+    return (
+        <div className='flex flex-col items-start space-y-2 sm:w-[90%]'>
+            <img className='w-[35px] aspect-square' src={icon} alt={title} />
+            <span className='font-semibold text-[16px] text-[#121111]'>{title}</span>
+            <p className='text-[13px] text-[#605b5b] leading-[22px]'>{description}</p>
+        </div>
+    )
+}
