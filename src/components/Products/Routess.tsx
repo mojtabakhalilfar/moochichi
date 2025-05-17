@@ -7,7 +7,7 @@ const Routess = () => {
       <div className='space-x-2 w-full flex '>
         {
             routes.map((item , index)=>(
-                <p className={`${index == routes.length-1?"text-[#14151b] font-medium":"text-[#929292]"} text-[16px]`}>{item} <span className={`${index == routes.length-1?"hidden":""}`}>|</span></p>
+                <p key={index} className={`${index == routes.length-1?"text-[#14151b] font-medium":"text-[#929292]"} text-[16px]`}>{item} <span className={`${index == routes.length-1?"hidden":""}`}>|</span></p>
                 
             ))
         }
