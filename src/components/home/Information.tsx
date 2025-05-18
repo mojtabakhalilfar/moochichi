@@ -1,23 +1,22 @@
 import React from 'react'
-import { TMenu } from '../Header'
+
 import Link from 'next/link'
+import { TCategory } from '@/types/Type'
 
-type TMenu2 = TMenu & {
-    image: string
-}
 
-const Information = () => {
-
-    const menu: TMenu2[] = [
-        { id: 2, title: "لوازم تحریر", link: "/stationery", image: "/assets/category/pen.png" },
-        { id: 3, title: "دکوری خاص", link: "/special", image: "/assets/category/joje.png" },
-        { id: 4, title: "استیکر", link: "/sticker", image: "/assets/category/sticker.png" },
-        { id: 5, title: "کیف و کوله", link: "/bags", image: "/assets/category/bag.png" },
-        { id: 6, title: "چراغ خواب", link: "/bedlight", image: "/assets/category/lamp.png" },
-        { id: 7, title: "لوازم آرایشی", link: "/makeup", image: "/assets/category/lip.png" },
-        { id: 8, title: "لوازم جانبی", link: "/lateral", image: "/assets/category/mobile.png" },
-        { id: 9, title: "اکسسوری خاص", link: "/accessory", image: "/assets/category/accessory.png" }
-    ]
+const Information = async() => {
+    const result = await fetch("http://localhost:8000/category")
+    const menu = await result.json() as TCategory[]
+    // const menu: TCategory[] = [
+    //     { id: 2, title: "لوازم تحریر", link: "/stationery", image: "/assets/category/pen.png" },
+    //     { id: 3, title: "دکوری خاص", link: "/special", image: "/assets/category/joje.png" },
+    //     { id: 4, title: "استیکر", link: "/sticker", image: "/assets/category/sticker.png" },
+    //     { id: 5, title: "کیف و کوله", link: "/bags", image: "/assets/category/bag.png" },
+    //     { id: 6, title: "چراغ خواب", link: "/bedlight", image: "/assets/category/lamp.png" },
+    //     { id: 7, title: "لوازم آرایشی", link: "/makeup", image: "/assets/category/lip.png" },
+    //     { id: 8, title: "لوازم جانبی", link: "/lateral", image: "/assets/category/mobile.png" },
+    //     { id: 9, title: "اکسسوری خاص", link: "/accessory", image: "/assets/category/accessory.png" }
+    // ]
 
     return (
         <div className='flex items-center justify-center w-full'>

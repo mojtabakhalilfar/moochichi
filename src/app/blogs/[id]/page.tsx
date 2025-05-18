@@ -2,14 +2,18 @@ import Blog from '@/components/blog/Blog'
 import RelatedBlog from '@/components/blog/RelatedBlog'
 import Comments from '@/components/product/Comments'
 import Routess from '@/components/Products/Routess'
+import { TParams } from '@/types/Type'
 import React from 'react'
 
-const page = () => {
+const page = async({ params }: TParams) => {
+  const {id}= await params
+  console.log(id)
+
   return (
     <div className='flex flex-col items-center w-full'>
         <Routess/>
         <div className='w-[90%] flex flex-col items-center space-y-4'>
-            <Blog/>
+            <Blog id={id}/>
             <RelatedBlog />
             <Comments/>
         </div>

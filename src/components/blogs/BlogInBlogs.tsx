@@ -15,7 +15,7 @@ const BlogInBlogs = ({src , alt , title , tags , id}: {src:string , alt: string 
                     ))
                    }
                 </div>
-               <Link href={`/blogs/blog${id}`}>
+               <Link href={`/blogs/${id}`}>
                <img src="/assets/icons/arrow-left.png" alt="" />
                </Link> 
                

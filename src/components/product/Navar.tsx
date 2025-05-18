@@ -1,8 +1,9 @@
+import { TCategory, TMostPopular } from '@/types/Type'
 import React from 'react'
 
 
 const Navar = () => {
-    const information: { id: number, title: string, image: string }[] = [
+    const information: TMostPopular[] = [
         { id: 1, title: "پشتیبانی آنلاین", image: "/assets/product/headphone.png" },
         { id: 2, title: "تضمین کیفیت", image: "/assets/product/like-shapes.png" },
         { id: 3, title: "ارسال سریع", image: "/assets/product/group.png" },

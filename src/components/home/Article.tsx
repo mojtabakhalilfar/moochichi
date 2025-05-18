@@ -1,20 +1,16 @@
+import { TBlog } from '@/types/Type'
 import Link from 'next/link'
 import React from 'react'
 
-type TArticle = {
-    id: number,
-    image: string,
-    title: string,
-    tags: Array<string>
-}
-
-const Article = () => {
-
-    const article:TArticle[] = [
-        { id: 1, image: "/assets/article/image1.png", title: "مزایای خرید اینترنتی لوازم تحریر", tags: ["دسته بندی: آموزشی"] },
-        { id: 2, image: "/assets/article/image2.png", title: "مزایای خرید اینترنتی لوازم تحریر", tags: ["دسته بندی: آموزشی"] },
-        { id: 3, image: "/assets/article/image3.png", title: "مزایای خرید اینترنتی لوازم تحریر", tags: ["دسته بندی: آموزشی"] },
-    ]
+const  Article = async() => {
+    const result = await fetch("http://localhost:8000/articleHome")
+    const article = await result.json() as TBlog[]
+    console.log(article)
+    // const article:TArticle[] = [
+    //     { id: 1, image: "/assets/article/image1.png", title: "مزایای خرید اینترنتی لوازم تحریر", tags: ["دسته بندی: آموزشی"] },
+    //     { id: 2, image: "/assets/article/image2.png", title: "مزایای خرید اینترنتی لوازم تحریر", tags: ["دسته بندی: آموزشی"] },
+    //     { id: 3, image: "/assets/article/image3.png", title: "مزایای خرید اینترنتی لوازم تحریر", tags: ["دسته بندی: آموزشی"] },
+    // ]
     return (
         <div className='flex items-center justify-center my-12'>
             <div className='flex flex-col items-center w-[90%] space-y-8'>
@@ -22,7 +18,7 @@ const Article = () => {
                 <div className='space-y-5 sm:space-y-0 sm:space-x-5  flex flex-col sm:flex-row items-center'>
                     {
                         article.map((items)=>(
-                            <Link className='space-y-5' href={`articles/article${items.id}`}>
+                            <Link className='space-y-5' href={`/blogs/${items.id}`}>
                                 <img className='rounded-[14px] w-[342px] sm:w-[353px] h-[218px]' src={items.image} alt={items.title} />
                                 <span className='font-medium text-[18px] text-[#2d2728] px-4'>{items.title}</span>
                                 <div className='flex justify-between px-4'>

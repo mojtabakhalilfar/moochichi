@@ -1,15 +1,11 @@
+import { TWhyus } from '@/types/Type'
 import React from 'react'
 
-export type TContact = {
-    id: number,
-    title: string,
-    description: string,
-    icon: string
-}
+
 
 const WhyUs = ({ children }: { children: React.ReactNode | null }) => {
 
-    const contact: TContact[] = [
+    const contact: TWhyus[] = [
         { id: 1, title: "پرداخت امن با درگاه امن", description: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله است", icon: "/assets/icons/wallet-check.png" },
         { id: 2, title: "رضایت بیش از ۱ میلیون مشتری", description: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله است", icon: "/assets/icons/grammerly.png" },
         { id: 3, title: "پشتیبانی ۲۴ ساعته", description: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله است", icon: "/assets/icons/24-support.png" },
@@ -26,11 +22,6 @@ const WhyUs = ({ children }: { children: React.ReactNode | null }) => {
                     {
                         contact.map((items) => (
                             <Answer key={items.id} icon={items.icon} title={items.title} description={items.description} id={items.id} />
-                            // <div key={items.id} className='flex flex-col items-start space-y-2 sm:w-[90%]'>
-                            //     <img className='w-[35px] aspect-square' src={items.icon} alt={items.title} />
-                            //     <span className='font-semibold text-[16px] text-[#121111]'>{items.title}</span>
-                            //     <p className='text-[13px] text-[#929292]'>{items.description}</p>
-                            // </div>
                         ))
                     }
                 </div>

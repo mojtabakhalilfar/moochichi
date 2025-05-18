@@ -41,7 +41,7 @@ const PI_text = () => {
             </div>
             <PI_SelectedColor colors={product.colors} key={product.id} />
             <PI_AddToCart />
-            <div className='absolute left-0 top-0 sm:top-[20%] flex flex-col items-end text-[12px] sm:text-[14px]'>
+            <div className='absolute left-0 sm:left-[15%] top-0 sm:top-[20%] flex flex-col items-end text-[12px] sm:text-[14px]'>
                 <span className='flex '>امتیاز : {4.5} <img src="/assets/product/star.png" alt="" /></span>
                 <span className='flex'>ضمانت اصالت و کیفیت کالا <img src="/assets/product/shield-tick.png" alt="" /></span>
             </div>

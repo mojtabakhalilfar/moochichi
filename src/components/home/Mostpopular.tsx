@@ -1,28 +1,22 @@
-"use client"
-
-import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { Suspense } from 'react'
 import { TMenu } from '../Header'
 import ProductHome from './ProductHome'
+import MostpopularClient from './MostpopularClient'
+import { TMostPopular } from '@/types/Type'
 
 
-export type TMostPopular = {
-    id: number,
-    title: string,
-    image: string,
-    firstPrice: number,
-    finalPrice: number,
-}
-const Mostpopular = () => {
-    const [clicked, setClicked] = useState<number>(1)
-    const mostpopular: TMostPopular[] = [
-        { id: 1, title: "چراغ خواب خوک", image: "/assets/most popular/image5.png", firstPrice: 1200000, finalPrice: 976000, },
-        { id: 2, title: "چراغ خواب خوک", image: "/assets/most popular/image6.png", firstPrice: 1200000, finalPrice: 976000, },
-        { id: 3, title: "چراغ خواب خوک", image: "/assets/most popular/image7.png", firstPrice: 1200000, finalPrice: 976000, },
-        { id: 4, title: "چراغ خواب خوک", image: "/assets/most popular/image8.png", firstPrice: 1200000, finalPrice: 976000, },
-        { id: 5, title: "چراغ خواب خوک", image: "/assets/most popular/image9.png", firstPrice: 1200000, finalPrice: 976000, },
 
-    ]
+const Mostpopular = async() => {
+    const result = await fetch("http://localhost:8000/mostpopular")
+    const mostpopular = await result.json() as TMostPopular[]
+    // const mostpopular: TMostPopular[] = [
+    //     { id: 1, title: "چراغ خواب خوک", image: "/assets/most popular/image5.png", firstPrice: 1200000, finalPrice: 976000, },
+    //     { id: 2, title: "چراغ خواب خوک", image: "/assets/most popular/image6.png", firstPrice: 1200000, finalPrice: 976000, },
+    //     { id: 3, title: "چراغ خواب خوک", image: "/assets/most popular/image7.png", firstPrice: 1200000, finalPrice: 976000, },
+    //     { id: 4, title: "چراغ خواب خوک", image: "/assets/most popular/image8.png", firstPrice: 1200000, finalPrice: 976000, },
+    //     { id: 5, title: "چراغ خواب خوک", image: "/assets/most popular/image9.png", firstPrice: 1200000, finalPrice: 976000, },
+
+    // ]
 
     const menu: TMenu[] = [
         { id: 1, title: "همه محصولات", link: "/stationery", },
@@ -39,9 +33,9 @@ const Mostpopular = () => {
     return (
         <div className='flex flex-col justify-center items-center my-8 w-full'>
             <div className='flex flex-col justify-center items-center w-full'>
-                <span className='font-semibold text-[18px] text-[#2d2728] my-4'>محبوب ترین مرتبط</span>
+                <span className='font-semibold text-[18px] text-[#2d2728] my-4'>محبوب ترین محصولات</span>
                 <div className="rounded-[49px] bg-[#fff0f7] w-[90%] sm:w-[60%] px-2 py-1 overflow-x-auto scrollbar-hide flex items-center space-x-2 ">
-                    {menu.map((item) => (
+                    {/* {menu.map((item) => (
                         <button
                             key={item.id}
                             onClick={() => setClicked(item.id)}
@@ -52,13 +46,16 @@ const Mostpopular = () => {
                         >
                             {item.title}
                         </button>
-                    ))}
+                    ))} */}
+                    <Suspense fallback={<div className='w-full'>در حال بارگذاری...</div>}>
+                        <MostpopularClient menu={menu} />
+                    </Suspense>
                 </div>
                 <div className='grid grid-cols-2 gap-4 my-4 sm:flex items-center justify-around'>
                     {
                         mostpopular.map((items, index) => (
                             <div className={`${index > 3 ? "hidden sm:flex" : "flex"}`}>
-                                <ProductHome title={items.title} id={items.id} key={items.id} finalPrice={items.finalPrice} firstPrice={items.firstPrice} image={items.image} />
+                                <ProductHome  key={items.id} {...items} />
                             </div>
                         ))
                     }

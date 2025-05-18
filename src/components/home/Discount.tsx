@@ -1,11 +1,12 @@
 "use client"
 import React, { useState } from 'react'
-import { TMostPopular } from './Mostpopular'
+
 import ProductHome from './ProductHome'
+import { TDiscount } from '@/types/Type'
 
 const Discount = () => {
     const [showProduct, setShowProduct] = useState(1)
-    const mostpopular: TMostPopular[] = [
+    const discount: TDiscount[] = [
         { id: 1, title: "چراغ خواب خوک", image: "/assets/most popular/image5.png", firstPrice: 1200000, finalPrice: 976000, },
         { id: 2, title: "چراغ خواب خوک", image: "/assets/most popular/image6.png", firstPrice: 1200000, finalPrice: 976000, },
         { id: 3, title: "چراغ خواب خوک", image: "/assets/most popular/image7.png", firstPrice: 1200000, finalPrice: 976000, },
@@ -15,11 +16,11 @@ const Discount = () => {
     ]
 
     const preve = () => {
-        if (showProduct == 1) setShowProduct(mostpopular.length)
+        if (showProduct == 1) setShowProduct(discount.length)
         else setShowProduct(showProduct - 1)
     }
     const next = () => {
-        if (showProduct == mostpopular.length) setShowProduct(1)
+        if (showProduct == discount.length) setShowProduct(1)
         else setShowProduct(showProduct + 1)
 
     }
@@ -39,7 +40,7 @@ const Discount = () => {
                 <div className='flex items-center justify-around w-[70%] sm:w-[90%] text-white space-x-4'>
                     <button className='sm:hidden' onClick={next}>n</button>
                     {
-                        mostpopular.map((items) => (
+                        discount.map((items) => (
                             <div className={`${items.id == showProduct ? "flex" : "hidden sm:flex"}`}>
                                 <ProductHome
                                     finalPrice={items.finalPrice}

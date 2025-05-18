@@ -1,15 +1,9 @@
+import { TDiscount } from '@/types/Type'
 import Link from 'next/link'
 import React from 'react'
 
-type TPropsProductHome ={
-    id:number,
-    title:string,
-    finalPrice:number,
-    firstPrice: number,
-    image : string
-}
 
-const ProductHome = ({id , title , finalPrice ,firstPrice ,image}:TPropsProductHome) => {
+const ProductHome = ({id , title , finalPrice ,firstPrice ,image}:TDiscount) => {
     return (
         <div className={`flex flex-col bg-[#fff8fd] rounded-[11.31px] p-2 flex-shrink-0`} key={id}>
             <Link href={`product${id}`}>
