@@ -24,7 +24,7 @@ const Sort = ({ className }: { className: React.ReactNode }) => {
             </button>
             {
               listOfSort.map((item) => (
-                <span className={`${item.id == selected ? show?"hidden":"flex" : "hidden"} text-nowrap sm:hidden  absolute sm:static top-0 right-10`}>{item.title}</span>
+                <span key={item.id} className={`${item.id == selected ? show?"hidden":"flex" : "hidden"} text-nowrap sm:hidden  absolute sm:static top-0 right-10`}>{item.title}</span>
               ))
             }
           <div className='flex flex-col sm:flex-row  absolute sm:static top-4 right-0 bg-amber-50 sm:bg-none'>
@@ -32,7 +32,7 @@ const Sort = ({ className }: { className: React.ReactNode }) => {
             <div className={`${show?"flex":"hidden"} sm:flex flex-col sm:flex-row items-center`}>
             {
               listOfSort.map((item, index) => (
-                <div className={`text-[14px] flex`}>
+                <div key={item.id} className={`text-[14px] flex`}>
                   <button className={`${item.id == selected ? "text-[#EC6880] border-b-2 rounded-b-[1px] border-[#EC6880]" : "text-[#404040]"}`} onClick={() => {setSelected(item.id); setShow(false) } }>{item.title}</button>
                   <span className={`${index == listOfSort.length - 1 ? "hidden" : "hidden sm:flex"} mx-2 `} >   |   </span>
                 </div>

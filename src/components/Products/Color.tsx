@@ -18,7 +18,7 @@ const Color = () => {
         <FilterLayout title='رنگ' search='رنگ'>
             {
                 category.map((item) => (
-                    <div className='flex items-center justify-between'>
+                    <div key={item.id} className='flex items-center justify-between'>
                         <div className='space-x-1'>
                             <input value={1} onChange={(e) => console.log(e.target.id)} type="checkbox" name="" id={item.id.toString()} />
                             <label htmlFor="">{item.title}</label>

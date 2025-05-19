@@ -83,6 +83,8 @@ export type TMostPopular = {
     id: number,
     title: string,
     image: string,
+    firstPrice?: number,
+    finalPrice?: number,
 
 }
 
@@ -93,10 +95,10 @@ export type TCategory = {
     image?: string
 }
 
-export type TDiscount = TMostPopular & {
-    firstPrice: number,
-    finalPrice: number,
-}
+// export type TDiscount = TMostPopular & {
+//     firstPrice: number,
+//     finalPrice: number,
+// }
 
 export type TBanners = Omit<TMostPopular, "title">
 
@@ -109,5 +111,9 @@ export type TWhyus = {
 
 export type TParams = {
     params: Promise<{ id: string }>,
+    searchParams: Promise<{}>
+}
+export type TCParams = {
+    params: Promise<{ category: string }>,
     searchParams: Promise<{}>
 }

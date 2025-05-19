@@ -15,8 +15,8 @@ const NewBolg = async () => {
                 <img className='w-full h-[255px] rounded-[20px] sm:w-661 sm:h-[423px] sm:rounded-[32px]' src={article.image} alt="" />
                 <div className='text-[#a89c9f] space-y-4 sm:px-6 sm:space-y-10'>
                     <span className='text-[14px] leading-[180%] text-right'> دسته بندی: {
-                    article.tags.map((item)=>(
-                        <span>{item}</span>
+                    article.tags.map((item,index)=>(
+                        <span key={index}>{item}</span>
                     ))
                     }</span>
                     <h2 className='font-bold text-[24px] text-[#2D2728] text-center sm:text-right'>{article.title}</h2>

@@ -54,8 +54,8 @@ const Mostpopular = async() => {
                 <div className='grid grid-cols-2 gap-4 my-4 sm:flex items-center justify-around'>
                     {
                         mostpopular.map((items, index) => (
-                            <div className={`${index > 3 ? "hidden sm:flex" : "flex"}`}>
-                                <ProductHome  key={items.id} {...items} />
+                            <div key={items.id} className={`${index > 3 ? "hidden sm:flex" : "flex"}`}>
+                                <ProductHome  {...items} />
                             </div>
                         ))
                     }

@@ -1,8 +1,11 @@
 import React from 'react'
-import { TMostPopular } from '../home/Mostpopular'
-import ProductHome from '../home/ProductHome'
 
-const Products = ({className}:{className:React.ReactNode}) => {
+import ProductHome from '../home/ProductHome'
+import { TMostPopular } from '@/types/Type'
+
+const Products = ({className , category}:{className:React.ReactNode , category: string}) => {
+        
+
         const products : TMostPopular[]=[
         { id: 1, title: "چراغ خواب خوک", image: "/assets/most popular/image5.png", firstPrice: 1200000, finalPrice: 976000, },
         { id: 2, title: "چراغ خواب خوک", image: "/assets/most popular/image6.png", firstPrice: 1200000, finalPrice: 976000, },

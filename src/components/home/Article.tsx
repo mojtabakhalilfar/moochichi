@@ -18,7 +18,7 @@ const  Article = async() => {
                 <div className='space-y-5 sm:space-y-0 sm:space-x-5  flex flex-col sm:flex-row items-center'>
                     {
                         article.map((items)=>(
-                            <Link className='space-y-5' href={`/blogs/${items.id}`}>
+                            <Link key={items.id} className='space-y-5' href={`/blogs/${items.id}`}>
                                 <img className='rounded-[14px] w-[342px] sm:w-[353px] h-[218px]' src={items.image} alt={items.title} />
                                 <span className='font-medium text-[18px] text-[#2d2728] px-4'>{items.title}</span>
                                 <div className='flex justify-between px-4'>

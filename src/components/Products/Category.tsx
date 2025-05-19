@@ -20,7 +20,7 @@ const Category = () => {
         <FilterLayout title='دسته بندی' search='دسته بندی'>
             {
                 category.map((item) => (
-                    <div className='space-x-1'>
+                    <div key={item.id} className='space-x-1'>
                         <input value={1} onChange={(e) => console.log(e.target.id)} type="checkbox" name="" id={item.id.toString()} />
                         <label htmlFor="">{item.title}</label>
                     </div>

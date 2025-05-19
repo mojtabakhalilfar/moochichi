@@ -2,11 +2,11 @@
 import React, { useState } from 'react'
 
 import ProductHome from './ProductHome'
-import { TDiscount } from '@/types/Type'
+import { TMostPopular } from '@/types/Type'
 
 const Discount = () => {
     const [showProduct, setShowProduct] = useState(1)
-    const discount: TDiscount[] = [
+    const discount: TMostPopular[] = [
         { id: 1, title: "چراغ خواب خوک", image: "/assets/most popular/image5.png", firstPrice: 1200000, finalPrice: 976000, },
         { id: 2, title: "چراغ خواب خوک", image: "/assets/most popular/image6.png", firstPrice: 1200000, finalPrice: 976000, },
         { id: 3, title: "چراغ خواب خوک", image: "/assets/most popular/image7.png", firstPrice: 1200000, finalPrice: 976000, },
@@ -41,14 +41,14 @@ const Discount = () => {
                     <button className='sm:hidden' onClick={next}>n</button>
                     {
                         discount.map((items) => (
-                            <div className={`${items.id == showProduct ? "flex" : "hidden sm:flex"}`}>
+                            <div key={items.id} className={`${items.id == showProduct ? "flex" : "hidden sm:flex"}`}>
                                 <ProductHome
                                     finalPrice={items.finalPrice}
                                     id={items.id}
                                     firstPrice={items.firstPrice}
                                     image={items.image}
                                     title={items.title}
-                                    key={items.id} />
+                                     />
                             </div>
                         ))
                     }
