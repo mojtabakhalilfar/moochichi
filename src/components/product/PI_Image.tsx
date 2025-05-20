@@ -1,14 +1,12 @@
 "use client"
 
+import { TButtons } from '@/types/Type'
 import React, { useState } from 'react'
 
-type TButtons = {
-  id: number,
-  image: string
-}
-const PI_Image = () => {
+
+const PI_Image = ({images}:{images:TButtons[]}) => {
   const [selected, setSelected] = useState(0)
-  // const [selectedIndex , setSelectedIndex] = useState<number>(0)
+
 
   const buttons: TButtons[] = [
     { id: 1, image: '/assets/product/heart.png' },
@@ -17,13 +15,13 @@ const PI_Image = () => {
     { id: 4, image: '/assets/product/notification-bing.png' },
   ]
 
-  const images: TButtons[] = [
-    { id: 0, image: '/assets/product/image5.png' },
-    { id: 1, image: '/assets/product/image1.png' },
-    { id: 2, image: '/assets/product/image2.png' },
-    { id: 3, image: '/assets/product/image3.png' },
-    { id: 4, image: '/assets/product/image4.png' },
-  ]
+  // const images: TButtons[] = [
+  //   { id: 0, image: '/assets/product/image5.png' },
+  //   { id: 1, image: '/assets/product/image1.png' },
+  //   { id: 2, image: '/assets/product/image2.png' },
+  //   { id: 3, image: '/assets/product/image3.png' },
+  //   { id: 4, image: '/assets/product/image4.png' },
+  // ]
 
   const functionButton = (e: number) => {
 
@@ -48,7 +46,7 @@ const PI_Image = () => {
         {/* <button>
           <img className='h-6 w-6 hidden sm:flex' src="/assets/icons/arrow-square-down.png" alt="" />
         </button> */}
-        {
+        {images &&
           images.map((item, index) => (
             <img onClick={() => setSelected(item.id)} className={`w-[72px] sm:w-[88px] aspect-square rounded-[9px] ${index > 2 ? "hidden" : "flex"} ${index > 3 ? "sm:hidden" : "sm:flex"}`} src={item.image} alt={`image${item.id}`} key={item.id}/>
           ))

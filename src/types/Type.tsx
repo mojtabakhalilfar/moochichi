@@ -117,9 +117,32 @@ export type TCParams = {
     params: Promise<{ category: string }>,
     searchParams: Promise<{}>
 }
-
+export type TPParams = {
+    params: Promise<{ product : string }>,
+    searchParams: Promise<{}>
+}
 export type TCategoris = {
     [key : string]:TMostPopular[]
 }
 
 export type TProductHome = TMostPopular & {category : string}
+
+export type TButtons = {
+  id: number,
+  image: string
+}
+
+export type TColor = {
+  id: number;
+  title: string;
+  code: string; // like "bg-[#6691FF]"
+};
+
+export type TProductText = {
+  title: string;
+  tag: string;
+  id: number;
+  features: string[];
+  colors: TColor[];
+  count: number;
+};

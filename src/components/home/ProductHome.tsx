@@ -6,7 +6,7 @@ import React from 'react'
 const ProductHome = ({ id , title , finalPrice ,firstPrice ,image ,category }:TProductHome) => {
     return (
         <div className={`flex flex-col bg-[#fff8fd] rounded-[11.31px] p-2 flex-shrink-0`}>
-            <Link href={`/${category}/product${id}`}>
+            <Link href={`/${category}/${id}`}>
 
                 <img className='w-[156px] h-[140px] sm:w-[220px] sm:h-[223px] rounded-[5.6px] sm:rounded-[8px] object-cover' src={image} alt={title} />
             </Link>
