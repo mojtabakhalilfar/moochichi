@@ -117,3 +117,9 @@ export type TCParams = {
     params: Promise<{ category: string }>,
     searchParams: Promise<{}>
 }
+
+export type TCategoris = {
+    [key : string]:TMostPopular[]
+}
+
+export type TProductHome = TMostPopular & {category : string}

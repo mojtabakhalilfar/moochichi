@@ -169,6 +169,584 @@
             "image": "/assets/category/accessory.png"
         }
     ],
+    "categoris": {
+        "stationery": [
+            {
+                "id": 1,
+                "title": "sچراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 2,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 3,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 4,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 5,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 6,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 7,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 8,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 9,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 10,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            }
+        ],
+        "special": [
+            {
+                "id": 1,
+                "title": "spچراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 2,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 3,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 4,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 5,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 6,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 7,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 8,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 9,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 10,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            }
+        ],
+        "sticker": [
+            {
+                "id": 1,
+                "title": "stچراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 2,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 3,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 4,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 5,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 6,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 7,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 8,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 9,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 10,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            }
+        ],
+        "bags": [
+            {
+                "id": 1,
+                "title": "bچراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 2,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 3,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 4,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 5,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 6,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 7,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 8,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 9,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 10,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            }
+        ],
+        "bedlight": [
+            {
+                "id": 1,
+                "title": "beچراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 2,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 3,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 4,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 5,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 6,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 7,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 8,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 9,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 10,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            }
+        ],
+        "makeup": [
+            {
+                "id": 1,
+                "title": "mچراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 2,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 3,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 4,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 5,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 6,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 7,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 8,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 9,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 10,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            }
+        ],
+        "lateral": [
+            {
+                "id": 1,
+                "title": "lچراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 2,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 3,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 4,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 5,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 6,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 7,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 8,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 9,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 10,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            }
+        ],
+        "accessory": [
+            {
+                "id": 1,
+                "title": "aچراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 2,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 3,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 4,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 5,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 6,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image5.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 7,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image6.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 8,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image7.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 9,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image8.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            },
+            {
+                "id": 10,
+                "title": "چراغ خواب خوک",
+                "image": "/assets/most popular/image9.png",
+                "firstPrice": 1200000,
+                "finalPrice": 976000
+            }
+        ]
+    },
     "mostpopular": [
         {
             "id": 1,
@@ -681,5 +1259,4 @@
             ]
         }
     ]
-
 }
