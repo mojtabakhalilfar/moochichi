@@ -5,7 +5,7 @@ import { TMostPopular } from '@/types/Type'
 
 const RelatedProduct = ({mostpopular}:{mostpopular:TMostPopular[]}) => {
     // const mostpopular: TMostPopular[] = [
-    console.log(mostpopular)
+
     //     { id: 1, title: "چراغ خواب خوک", image: "/assets/most popular/image5.png", firstPrice: 1200000, finalPrice: 976000, },
     //     { id: 2, title: "چراغ خواب خوک", image: "/assets/most popular/image6.png", firstPrice: 1200000, finalPrice: 976000, },
     //     { id: 3, title: "چراغ خواب خوک", image: "/assets/most popular/image7.png", firstPrice: 1200000, finalPrice: 976000, },

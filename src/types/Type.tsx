@@ -4,7 +4,7 @@ export type TProduct = {
     tag: string
     count: number
     description: string
-
+    
     image: {
         id: number
         image: string
@@ -125,7 +125,7 @@ export type TCategoris = {
     [key : string]:TMostPopular[]
 }
 
-export type TProductHome = TMostPopular & {category : string}
+export type TProductHome = TMostPopular & {category ?: string}
 
 export type TButtons = {
   id: number,

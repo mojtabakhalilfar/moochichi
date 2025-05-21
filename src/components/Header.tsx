@@ -1,17 +1,14 @@
-"use client"
+import { TCategory } from '@/types/Type'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
+import ShowMenu from './Header/ShowMenu'
+import Search from './Header/Search'
 
-export type TMenu= {
-    id: number,
-    title: string,
-    link: string
-}
 
 const Header = () => {
-    const [showNavbar, setShowNavbar] = useState(false)
 
-    const menu: TMenu[] = [
+
+    const menu: TCategory[] = [
         { id: 1, title: "صفحه اصلی", link: "/" },
         { id: 2, title: "لوازم تحریر", link: "/stationery" },
         { id: 3, title: "دکوری خاص", link: "/special" },
@@ -26,24 +23,15 @@ const Header = () => {
     const HeaderMobile =
         <div className='w-full flex flex-col items-center justify-center relative'>
             <div className='flex items-center justify-between w-[342px] h-[48px]'>
-                <div className='w-12 h-12 relative'>
-                    <button onClick={() => setShowNavbar(!showNavbar)} className='w-full h-full rounded-[48px] bg-[ec6880] flex items-center justify-center'><img className='w-5 aspect-square' src="/assets/icons/" alt="" /></button>
-                </div>
+
                 <div className='flex'>
                     <div className='w-10 h-4 bg-[#ff6687] rounded-[19px]'></div>
                     <img className='w-[82px] h-5' src="/assets/icons/logo.png" alt="" />
                 </div>
                 <button className='w-12 aspect-square rounded-[48px] bg-[ec6880] flex items-center justify-center'><img className='w-5 aspect-square' src="/assets/icons/cart.png" alt="" /></button>
             </div>
-            <div className='w-[342px] h-12 relative'>
-                <input className='w-full h-full rounded-[64px] bg-[#f6f6f6] text-[#a89c9f] border-none outline-none px-6' placeholder='جستجو در فروشگاه ...' type="text" />
-                <button className='absolute left-4 top-3'><img className='w-5 h-5' src="/assets/icons/search-normal.png" /></button>
-            </div>
-            <div className={`${showNavbar ? "flex" : "hidden"} flex-col items-center w-full absolute top-[50%] bg-[#30303d]`}>
-                {menu.map((items) => (
-                    <div className='text-white w-full text-center my-2' key={items.id}><Link className='w-full text-[14px] text-[#acacb1] hover:text-white' href={items.link}>{items.title}</Link></div>
-                ))}
-            </div>
+            <Search />
+            <ShowMenu menu={menu} />
         </div>
 
     const HeaderDesktop =
@@ -54,10 +42,7 @@ const Header = () => {
                         <div className='w-10 h-4 bg-[#ff6687] rounded-[19px]'></div>
                         <img className='w-[82px] h-5' src="/assets/icons/logo.png" alt="" />
                     </div>
-                    <div className='w-[500px] h-12 relative mx-4'>
-                        <input className='w-full h-full rounded-[64px] bg-[#f6f6f6] text-[#a89c9f] border-none outline-none px-6' placeholder='جستجو در فروشگاه ...' type="text" />
-                        <button className='absolute left-4 top-3'><img className='w-5 h-5' src="/assets/icons/search-normal.png" /></button>
-                    </div>
+                    <Search />
                 </div>
                 <div className='flex justify-between'>
                     <button className='w-12 aspect-square rounded-[48px] bg-[ec6880] flex items-center justify-center'>
