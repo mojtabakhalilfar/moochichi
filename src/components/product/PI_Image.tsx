@@ -31,7 +31,7 @@ const PI_Image = ({images}:{images:TButtons[]}) => {
   return (
     <div className='flex flex-col sm:flex-row-reverse items-center justify-center w-full h-auto space-y-2 mb-4 sm:ml-4'>
       <div className='w-[342px] sm:w-[533px] aspect-square relative flex items-center justify-center'>
-        <img className='w-full h-full rounded-[24px]' src={images[selected].image} alt="" />
+        <img className='w-full h-full rounded-[24px]' src={images[selected]?.image} alt="" />
         <div className='absolute top-[5%] right-3 flex flex-col items-center justify-center space-y-2'>
           {
             buttons.map((item) => (

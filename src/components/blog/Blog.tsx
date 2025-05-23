@@ -1,13 +1,24 @@
 import { TBlog, TParams } from '@/types/Type'
 import React from 'react'
 
-const Blog = async ({id}:{id:string}) => {
-    
-    // const { id } = await params
-    console.log(id)
+const Blog = async ({ id }: { id: string }) => {
+
+
     const result = await fetch(`http://localhost:8000/blog/${id}`)
     const data = await result.json() as TBlog
-    // console.log(data.comments)
+    // try {
+    //     const result = await fetch(`http://localhost:8000/blog/`)
+
+    //     if (!result.ok) {
+    //         throw new Error("پست پیدا نشد!")
+    //     }
+
+    //     const data = await result.json() as TBlog
+    //     console.log(data)
+
+    // } catch (error) {
+    //     console.error("خطا در دریافت پست:", error)
+    // }
 
 
     return (

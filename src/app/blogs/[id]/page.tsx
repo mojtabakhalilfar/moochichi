@@ -15,7 +15,7 @@ const page = async({ params }: TParams) => {
         <div className='w-[90%] flex flex-col items-center space-y-4'>
             <Blog id={id}/>
             <RelatedBlog />
-            <Comments/>
+            <Comments productId={parseInt(id)} />
         </div>
       
     </div>

@@ -4,7 +4,7 @@ export type TProduct = {
     tag: string
     count: number
     description: string
-    
+
     image: {
         id: number
         image: string
@@ -95,10 +95,6 @@ export type TCategory = {
     image?: string
 }
 
-// export type TDiscount = TMostPopular & {
-//     firstPrice: number,
-//     finalPrice: number,
-// }
 
 export type TBanners = Omit<TMostPopular, "title">
 
@@ -118,31 +114,44 @@ export type TCParams = {
     searchParams: Promise<{}>
 }
 export type TPParams = {
-    params: Promise<{ product : string }>,
+    params: Promise<{ product: string }>,
     searchParams: Promise<{}>
 }
 export type TCategoris = {
-    [key : string]:TMostPopular[]
+    [key: string]: TMostPopular[]
 }
 
-export type TProductHome = TMostPopular & {category ?: string}
+export type TProductHome = TMostPopular & { category?: string }
 
 export type TButtons = {
-  id: number,
-  image: string
+    id: number,
+    image: string
 }
 
 export type TColor = {
-  id: number;
-  title: string;
-  code: string; // like "bg-[#6691FF]"
+    id: number;
+    title: string;
+    code: string; // like "bg-[#6691FF]"
 };
 
 export type TProductText = {
-  title: string;
-  tag: string;
-  id: number;
-  features: string[];
-  colors: TColor[];
-  count: number;
+    title: string;
+    tag: string;
+    id: number;
+    features: string[];
+    colors: TColor[];
+    count: number;
 };
+
+// types/Type.ts
+export type CommentType = {
+  id: number
+  parentId: number | null
+  text: string
+  createdAt: string
+  writer?: string
+  phone?: string
+  image?: string
+  like?: number
+  dislike?: number
+}

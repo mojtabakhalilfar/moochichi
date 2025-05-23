@@ -21,8 +21,8 @@ const page = async ({ params }: TPParams) => {
         <PInformation images={data?.image} product={{colors:data?.colors , count:data?.count , features:data?.features , id:data?.id ,tag:data?.tag , title:data?.title}} />
         <Navar />
         <AboutProduct />
-        <RelatedProduct mostpopular={data.relatedproducts}/>
-        <Comments />
+        <RelatedProduct mostpopular={data?.relatedproducts}/>
+        <Comments productId={id} />
       </div>
     </div>
   )

@@ -1,42 +1,77 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import Comment from './Comment'
+import FormComment from './FormComment'
+import { CommentType } from '@/types/Type'
 
-const ListComment = () => {
-    const comments = [
-        { id: 1, parentId: null, text: "این یک کامنت است", createdAt: new Date("2024-05-10T10:00:00") },
-        { id: 2, parentId: 1, text: "پاسخ به کامنت 1", createdAt: new Date("2024-05-10T10:05:00") },
-        { id: 3, parentId: null, text: "کامنت دیگری", createdAt: new Date("2024-05-10T11:00:00") },
-        { id: 4, parentId: 3, text: "پاسخ به کامنت 3", createdAt: new Date("2024-05-10T11:02:00") },
-    ]
-    return (
-        <div className='flex flex-col items-start w-full'>
-            <h2 className='flex flex-row-reverse'>دیدگاه های کاربران <img src="/assets/icons/message-text.png" alt="" /></h2>
-            <Comment />
+type Props = {
+  productId: number
+}
+
+const ListComment: React.FC<Props> = ({ productId }) => {
+  const [comments, setComments] = useState<CommentType[]>([])
+
+  useEffect(() => {
+    axios.get(`http://localhost:8000/commentsP`)
+      .then(res => {
+        const productComments = res.data[String(productId)] || []
+        setComments(productComments)
+      })
+      .catch(err => console.error('Error loading comments:', err))
+  }, [productId])
+
+  const handleReply = (text: string, parentId: number) => {
+    const newComment: CommentType = {
+      id: Date.now(),
+      parentId,
+      text,
+      createdAt: new Date().toISOString(),
+      writer: "کاربر مهمان",
+      image: "/assets/icons/user2.png",
+      like: 0,
+      dislike: 0
+    }
+    setComments(prev => [...prev, newComment])
+  }
+
+  const handleAddComment = (name: string, phone: string, text: string) => {
+    const newComment: CommentType = {
+      id: Date.now(),
+      parentId: null,
+      text,
+      createdAt: new Date().toISOString(),
+      writer: name,
+      phone,
+      image: "/assets/icons/user2.png",
+      like: 0,
+      dislike: 0
+    }
+    setComments(prev => [...prev, newComment])
+  }
+
+  const renderComments = (parentId: number | null): React.ReactNode =>
+    comments
+      .filter(c => c.parentId === parentId)
+      .map(c => (
+        <div key={c.id} className={`w-full ${c.parentId ? 'ml-6 border-r pr-4' : ''}`}>
+          <Comment comment={c} onReply={handleReply} />
+          {renderComments(c.id)}
         </div>
-    )
+      ))
+
+  return (
+    <div className='flex flex-col items-start w-full gap-6'>
+      <h2 className='flex items-center gap-2 text-[16px] font-semibold'>
+        <img src="/assets/icons/message-text.png" className='w-5 h-5' />
+        دیدگاه‌های کاربران
+      </h2>
+
+      <FormComment onSubmitComment={handleAddComment} />
+
+      {renderComments(null)}
+    </div>
+  )
 }
 
 export default ListComment
-
-
-const Comment = () => {
-    return (
-        <div className='w-full rounded-[8px] px-6 py-4 border border-[#e7ebf0]'>
-            <div className='flex'>
-                <img className='w-12 h-12 rounded-[222px]' src="/assets/icons/user2.png" alt="" />
-                <span className='text-[16px] text-[#100e0c] leading-8'>زینب اطهر</span>
-                <span className='font-medium text-xs leading-8 text-[#929292]'>24 خرداد 1403</span>
-            </div>
-            <div className='min-h-12'>
-
-            </div>
-            <div className='flex flex-col sm:flex-row items-center sm:justify-between'>
-                <div className='flex space-x-4'>
-                    <span>این نظر برای شما مفید بود ؟</span>
-                    <div className='space-x-1 flex items-center text-[20px] text-[#adadad]'><button><img className='rotate-180' src="/assets/icons/dislike.png" alt="" /></button><span>0</span></div>
-                    <div className='space-x-1 flex items-center text-[20px] text-[#adadad]'><span>0</span><button><img  src="/assets/icons/dislike.png" alt="" /></button></div>
-                </div>
-                <div className='font-medium text-[14px] text-[#ff6687] leading-[180%]'><button>پاسخ به این نظر</button></div>
-            </div>
-        </div>
-    )
-}

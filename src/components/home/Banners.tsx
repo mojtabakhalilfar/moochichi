@@ -6,10 +6,6 @@ import React from 'react'
 const Banners = async() => {
     const resul = await fetch("http://localhost:8000/banner")
     const banners = await resul.json() as TBanners[]
-    // const banners: TBanners[] = [
-    //     { id: 1, image: "/assets/backgrounds/banner/banner1.png" },
-    //     { id: 1, image: "/assets/backgrounds/banner/banner2.png" },
-    // ]
     return (
         <div className='flex items-center justify-center w-full'>
             <div className='flex flex-col sm:flex-row items-center sm:justify-around w-full sm:w-[90%]'>
