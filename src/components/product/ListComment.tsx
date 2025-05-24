@@ -3,41 +3,54 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Comment from './Comment'
 import FormComment from './FormComment'
-import { CommentType } from '@/types/Type'
+
+type CommentType = {
+  id: number
+  parentId: number | null
+  text: string
+  createdAt: string
+  writer?: string
+  phone?: string
+  image?: string
+  like: number
+  dislike: number
+}
 
 type Props = {
   productId: number
 }
 
+let nextId = 1000
+
 const ListComment: React.FC<Props> = ({ productId }) => {
   const [comments, setComments] = useState<CommentType[]>([])
 
+  const fetchComments = async () => {
+    const res = await axios.get(`http://localhost:8000/commentsP`)
+    const productComments = res.data[productId] || []
+    setComments(productComments)
+  }
+
   useEffect(() => {
-    axios.get(`http://localhost:8000/commentsP`)
-      .then(res => {
-        const productComments = res.data[String(productId)] || []
-        setComments(productComments)
-      })
-      .catch(err => console.error('Error loading comments:', err))
+    fetchComments()
   }, [productId])
 
-  const handleReply = (text: string, parentId: number) => {
-    const newComment: CommentType = {
-      id: Date.now(),
-      parentId,
-      text,
-      createdAt: new Date().toISOString(),
-      writer: "کاربر مهمان",
-      image: "/assets/icons/user2.png",
-      like: 0,
-      dislike: 0
-    }
-    setComments(prev => [...prev, newComment])
+  const saveCommentToServer = async (newComment: CommentType) => {
+    const res = await axios.get(`http://localhost:8000/commentsP`)
+    const allComments = res.data
+    const productComments = allComments[productId] || []
+    const updatedComments = [...productComments, newComment]
+
+    await axios.put(`http://localhost:8000/commentsP`, {
+      ...allComments,
+      [productId]: updatedComments
+    })
+    setComments(updatedComments)
   }
 
   const handleAddComment = (name: string, phone: string, text: string) => {
     const newComment: CommentType = {
-      id: Date.now(),
+      id: nextId++,
       parentId: null,
       text,
       createdAt: new Date().toISOString(),
@@ -45,13 +58,27 @@ const ListComment: React.FC<Props> = ({ productId }) => {
       phone,
       image: "/assets/icons/user2.png",
       like: 0,
-      dislike: 0
+      dislike: 0,
     }
-    setComments(prev => [...prev, newComment])
+    saveCommentToServer(newComment)
   }
 
-  const renderComments = (parentId: number | null): React.ReactNode =>
-    comments
+  const handleReply = (text: string, parentId: number) => {
+    const reply: CommentType = {
+      id: nextId++,
+      parentId,
+      text,
+      createdAt: new Date().toISOString(),
+      writer: "کاربر مهمان",
+      image: "/assets/icons/user2.png",
+      like: 0,
+      dislike: 0,
+    }
+    saveCommentToServer(reply)
+  }
+
+  const renderComments = (parentId: number | null) => {
+    return comments
       .filter(c => c.parentId === parentId)
       .map(c => (
         <div key={c.id} className={`w-full ${c.parentId ? 'ml-6 border-r pr-4' : ''}`}>
@@ -59,6 +86,7 @@ const ListComment: React.FC<Props> = ({ productId }) => {
           {renderComments(c.id)}
         </div>
       ))
+  }
 
   return (
     <div className='flex flex-col items-start w-full gap-6'>
@@ -68,7 +96,6 @@ const ListComment: React.FC<Props> = ({ productId }) => {
       </h2>
 
       <FormComment onSubmitComment={handleAddComment} />
-
       {renderComments(null)}
     </div>
   )
