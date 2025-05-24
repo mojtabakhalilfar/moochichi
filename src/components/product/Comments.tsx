@@ -3,9 +3,10 @@ import ListComment from './ListComment'
 
 type Props = {
   productId: number
+  api : string
 }
 
-export default function Comments({ productId }: Props) {
+export default function Comments({ productId , api }: Props) {
   return (
     <div className='flex flex-col items-center w-full px-3 sm:px-10 space-y-4 my-10'>
       <div className='flex items-center justify-between w-full'>
@@ -18,7 +19,7 @@ export default function Comments({ productId }: Props) {
           <img className='w-24 h-4' src="/assets/icons/stars.png" alt="" />
         </div>
       </div>
-      <ListComment productId={productId}/>
+      <ListComment api={api} productId={productId}/>
     </div>
   )
 }

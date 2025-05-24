@@ -18,15 +18,16 @@ type CommentType = {
 
 type Props = {
   productId: number
+  api : string
 }
 
 let nextId = 1000
 
-const ListComment: React.FC<Props> = ({ productId }) => {
+const ListComment: React.FC<Props> = ({ productId , api }) => {
   const [comments, setComments] = useState<CommentType[]>([])
 
   const fetchComments = async () => {
-    const res = await axios.get(`http://localhost:8000/commentsP`)
+    const res = await axios.get(api) //
     const productComments = res.data[productId] || []
     setComments(productComments)
   }
@@ -36,12 +37,12 @@ const ListComment: React.FC<Props> = ({ productId }) => {
   }, [productId])
 
   const saveCommentToServer = async (newComment: CommentType) => {
-    const res = await axios.get(`http://localhost:8000/commentsP`)
+    const res = await axios.get(api) //
     const allComments = res.data
     const productComments = allComments[productId] || []
     const updatedComments = [...productComments, newComment]
 
-    await axios.put(`http://localhost:8000/commentsP`, {
+    await axios.put(api, { //
       ...allComments,
       [productId]: updatedComments
     })

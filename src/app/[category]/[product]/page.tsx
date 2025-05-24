@@ -22,7 +22,7 @@ const page = async ({ params }: TPParams) => {
         <Navar />
         <AboutProduct />
         <RelatedProduct mostpopular={data?.relatedproducts}/>
-        <Comments productId={id} />
+        <Comments api='http://localhost:8000/commentsP' productId={id} />
       </div>
     </div>
   )

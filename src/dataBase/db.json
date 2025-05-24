@@ -1992,5 +1992,77 @@
         "dislike": 0
       }
     ]
+  },
+  "commentsB": {
+    "1": [
+      {
+        "id": 100,
+        "parentId": null,
+        "text": "نئنئن",
+        "createdAt": "2025-05-23T16:58:05.443Z",
+        "writer": "مجتبی خلیل فر",
+        "phone": "09170496720",
+        "image": "/assets/icons/user2.png",
+        "like": 0,
+        "dislike": 0
+      },
+      {
+        "id": 1000,
+        "parentId": 100,
+        "text": "vsncalksclakn",
+        "createdAt": "2025-05-24T18:06:14.209Z",
+        "writer": "کاربر مهمان",
+        "image": "/assets/icons/user2.png",
+        "like": 0,
+        "dislike": 0
+      }
+    ],
+    "4": [
+      {
+        "id": 1003,
+        "parentId": null,
+        "text": "عععععععععععععععععععععیییییییییییییییییهههههههههههخخخخخخخخ",
+        "createdAt": "2025-05-24T17:24:30.396Z",
+        "writer": "مجتبی خلیل فر",
+        "phone": "0909909090",
+        "image": "/assets/icons/user2.png",
+        "like": 0,
+        "dislike": 0
+      }
+    ],
+    "5": [
+      {
+        "id": 1000,
+        "parentId": null,
+        "text": "ئئثحبثحصبن",
+        "createdAt": "2025-05-24T17:23:23.773Z",
+        "writer": "مجتبی خلیل فر",
+        "phone": "000000000000",
+        "image": "/assets/icons/user2.png",
+        "like": 0,
+        "dislike": 0
+      },
+      {
+        "id": 1001,
+        "parentId": null,
+        "text": "زئیزمسئز",
+        "createdAt": "2025-05-24T17:23:48.808Z",
+        "writer": "ئززمیئز",
+        "phone": "4444",
+        "image": "/assets/icons/user2.png",
+        "like": 0,
+        "dislike": 0
+      },
+      {
+        "id": 1002,
+        "parentId": 1001,
+        "text": "ئزبننزحززجسبنسئ",
+        "createdAt": "2025-05-24T17:23:58.607Z",
+        "writer": "کاربر مهمان",
+        "image": "/assets/icons/user2.png",
+        "like": 0,
+        "dislike": 0
+      }
+    ]
   }
 }
