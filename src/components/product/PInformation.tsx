@@ -6,7 +6,7 @@ import { TButtons, TProductText } from '@/types/Type'
 const PInformation = ({images ,product}:{images:TButtons[] , product:TProductText}) => {
     return (
         <div className='flex flex-col sm:flex-row w-full'>
-            <div className='flex flex-col sm:grid sm:grid-cols-2 w-full py-6'>
+            <div className='flex flex-col sm:grid sm:grid-cols-2 sm:gap-x-8 w-full py-6'>
                 <PI_Image images={images}/>
                 <PI_text product={product}/>
             </div>

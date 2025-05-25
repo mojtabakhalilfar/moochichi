@@ -1945,6 +1945,19 @@
         "dislike": 0
       }
     ],
+    "2": [
+      {
+        "id": 1000,
+        "parentId": null,
+        "text": "خیلی خوب بوووووود",
+        "createdAt": "2025-05-25T13:25:24.991Z",
+        "writer": "دنیا دشتیان",
+        "phone": "09018973476",
+        "image": "/assets/icons/user2.png",
+        "like": 0,
+        "dislike": 0
+      }
+    ],
     "4": [
       {
         "id": 1003,
