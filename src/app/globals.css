@@ -61,3 +61,6 @@ input[type='range'].range-slider {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.btn-header {
+  @apply w-11 aspect-square rounded-[48px] bg-[#ec6880] hover:bg-[#ffd8e0] text-white hover:text-[#ec6880] flex items-center justify-center
+}

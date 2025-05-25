@@ -155,3 +155,9 @@ export type CommentType = {
   like?: number
   dislike?: number
 }
+
+export type TList = {
+    id: number,
+    title: string,
+    link: string
+}

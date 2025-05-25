@@ -3,6 +3,7 @@
 import { TProduct } from '@/types/Type'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { FiSearch } from 'react-icons/fi'
 
 const Search = () => {
   const [text, setText] = useState("")
@@ -36,7 +37,7 @@ const Search = () => {
         type="text"
       />
       <button className='absolute left-4 top-4 sm:top-3'>
-        <img className='w-5 h-5' src="/assets/icons/search-normal.png" />
+        <FiSearch className='w-5 h-5 opacity-40'/>
       </button>
 
 {results.length > 0 && (

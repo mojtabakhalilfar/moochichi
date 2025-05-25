@@ -1,19 +1,18 @@
+import { TList } from '@/types/Type'
 import Link from 'next/link'
 import React from 'react'
+import { CiLocationOn } from 'react-icons/ci'
+import { IoCall } from 'react-icons/io5'
 
-type TList = {
-    id: number,
-    title: string,
-    link: string
-}
+
 
 export default function Footer() {
     const list: TList[] = [
         { id: 1, title: "صفحه اصلی", link: "/" },
         { id: 2, title: "فروشگاه", link: "/shop" },
-        { id: 3, title: "مجله", link: "" },
+        { id: 3, title: "مجله", link: "/blogs" },
         { id: 4, title: "درباره ما", link: "/aboutus" },
-        { id: 5, title: "تماس با ما", link: "call" },
+        { id: 5, title: "تماس با ما", link: "/contactus" },
     ]
     return (
         <div className='flex items-center justify-center w-full'>
@@ -27,18 +26,22 @@ export default function Footer() {
                 <section className='grid grid-cols-2 gap-x-10 my-4 sm:flex sm:list-none'>
                     {
                         list.map((items) => (
-                            <Link  key={items.id} className='text-[16px]' href={items.link}><li>{items.title}</li></Link>
+                            <Link key={items.id} className='text-[16px]' href={items.link}><li>{items.title}</li></Link>
                         ))
                     }
                 </section>
                 <section className='space-y-2 w-full flex flex-col sm:flex-row items-center sm:justify-center'>
-                    <div className='space-y-2 flex flex-col items-start w-[90%] sm:w-full sm:px-32'>
+                    <div className='space-y-2 flex flex-col items-start w-[90%] sm:w-full sm:px-32 text-white'>
                         <div className='flex items-center space-x-2'>
-                            <img className='w-[56px] aspect-square' src="/assets/icons/call.png" alt="" />
-                            <span className='w-full  text-[16px]'>098-123-456</span>
+                            <a href='' className=' w-[56px] aspect-square p-4 bg-[rgba(255,255,255,0.5)] flex items-center justify-center rounded-full'>
+                                <IoCall className='w-[56px] aspect-square' />
+                            </a>
+                            <span className='w-full text-[16px]'>0917-049-6720</span>
                         </div>
                         <div className='flex items-center space-x-2'>
-                            <img className='w-[56px] aspect-square' src="/assets/icons/location.png" alt="" />
+                            <a href='' className=' w-[56px] aspect-square p-4 bg-[rgba(255,255,255,0.5)] flex items-center justify-center rounded-full'>
+                                <CiLocationOn className='w-[56px] aspect-square' />
+                            </a>
                             <span className='w-full text-[16px]'>ایران ، تهران ، خیابان فرشته</span>
                         </div>
                     </div>
