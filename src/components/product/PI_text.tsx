@@ -6,22 +6,6 @@ import { TProductText } from '@/types/Type'
 
 const PI_text = ({product}:{product :TProductText}) => {
 
-    // const product = {
-    //     title: 'چراغ خواب گربه سیلیکونی',
-    //     tag: "چراغ خواب",
-    //     id: 1245987,
-    //     features: [
-    //         "جنس : پلاستیکی",
-    //         "کیفیت کالا : اورجینال - درجه یک",
-    //         "ابعاد : ۱۵x۱۵x۱۵ سانتی‌متر"
-    //     ],
-    //     colors: [
-    //         { id: 1, title: "آبی", code: "bg-[#6691FF]" },
-    //         { id: 2, title: "نارنجی", code: "bg-[#F29665]" },
-    //         { id: 3, title: "سبز", code: "bg-[#BAE399]" },
-    //     ],
-    //     count: 0
-    // }
 
     return (
         <div className='relative flex flex-col justify-evenly space-y-2 sm:px-4 aspect-square sm:space-y-12 sm:py-12'>
@@ -41,7 +25,7 @@ const PI_text = ({product}:{product :TProductText}) => {
                 </div>
             </div>
             <PI_SelectedColor colors={product?.colors} key={product?.id} />
-            <PI_AddToCart />
+            <PI_AddToCart id={product.id}/>
             <div className='absolute left-0 sm:left-[15%] top-0 sm:top-[20%] flex flex-col items-end text-[12px] sm:text-[14px]'>
                 <span className='flex '>امتیاز : {4.5} <img src="/assets/product/star.png" alt="" /></span>
                 <span className='flex'>ضمانت اصالت و کیفیت کالا <img src="/assets/product/shield-tick.png" alt="" /></span>
