@@ -1,6 +1,7 @@
 import { TMostPopular, TProductHome } from '@/types/Type'
 import Link from 'next/link'
 import React from 'react'
+import { FaCartShopping } from 'react-icons/fa6'
 
 
 const ProductHome = ({id , title , finalPrice ,firstPrice ,image  , category}:TProductHome) => {
@@ -13,7 +14,7 @@ const ProductHome = ({id , title , finalPrice ,firstPrice ,image  , category}:TP
             <h3 className='text-[14px] text-[#2d2728] my-2'>{title}</h3>
             <div className='flex justify-between'>
                 <button>
-                    <img className='' src="/assets/icons/shopping-cart.png" alt="" />
+                    <FaCartShopping className='w-5 h-5 text-[#ff6687]' />
                 </button>
                 <div className='text-[12px] font-medium flex flex-col'>
                     <span>{finalPrice?.toLocaleString()} ت</span>

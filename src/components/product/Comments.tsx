@@ -1,5 +1,6 @@
 import React from 'react'
 import ListComment from './ListComment'
+import { FaStar } from 'react-icons/fa6'
 
 type Props = {
   productId: number
@@ -16,7 +17,7 @@ export default function Comments({ productId , api }: Props) {
         </div>
         <div className='flex flex-col items-end'>
           <span className='text-[12px] font-medium'>امتیاز ۴ از ۵ از بین ۴۰ دیدگاه</span>
-          <img className='w-24 h-4' src="/assets/icons/stars.png" alt="" />
+          <FaStar className='w-5 h-5 text-yellow-600'/>
         </div>
       </div>
       <ListComment api={api} productId={productId}/>
