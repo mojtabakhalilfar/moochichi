@@ -16,9 +16,9 @@ const ProductHome = ({id , title , finalPrice ,firstPrice ,image  , category}:TP
                 <button>
                     <FaCartShopping className='w-5 h-5 text-[#ff6687]' />
                 </button>
-                <div className='text-[12px] font-medium flex flex-col'>
-                    <span>{finalPrice?.toLocaleString()} ت</span>
-                    <span className='text-[10px] text-[#a89c9f] my-1'>{firstPrice?.toLocaleString()} ت</span>
+                <div className='text-[12px] text-black font-medium flex flex-col'>
+                    <span >{finalPrice?.toLocaleString()} ت</span>
+                    <del className='text-[10px] text-[#a89c9f] my-1'>{firstPrice?.toLocaleString()} ت</del>
                 </div>
             </div>
         </div>
