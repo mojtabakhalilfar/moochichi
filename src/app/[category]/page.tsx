@@ -6,6 +6,7 @@ import React from 'react'
 
 export default async function page({params}:TCParams) {
     const {category} = await params
+    
     return (
         <div className='flex flex-col items-center justify-center w-full'>
             <div className='grid grid-cols-4 sm:grid-cols-12 space-y-8 '>
