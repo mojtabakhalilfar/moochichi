@@ -1,12 +1,13 @@
 "use client"
+import { TList } from '@/types/Type'
 import React, { useState } from 'react'
-import { TMenu } from '../Header'
 
 
-const Sort = ({ className }: { className: React.ReactNode }) => {
+
+const Sort = ({ className , number}: { className: React.ReactNode , number:number}) => {
   const [selected, setSelected] = useState(2)
   const [show, setShow] = useState(false)
-  const listOfSort: Omit<TMenu, "link">[] = [
+  const listOfSort: Omit<TList, "link">[] = [
     { id: 1, title: "پربازدیدترین" },
     { id: 2, title: "جدیدترین" },
     { id: 3, title: "پرفروش ترین" },
@@ -43,7 +44,7 @@ const Sort = ({ className }: { className: React.ReactNode }) => {
           </div>
         </div>
         <div className='hidden sm:flex'>
-          <span>3150 محصول موجود است</span>
+          <span>{number} محصول موجود است</span>
         </div>
       </div>
     </div>
