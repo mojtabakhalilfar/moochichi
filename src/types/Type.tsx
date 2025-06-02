@@ -159,5 +159,5 @@ export type CommentType = {
 export type TList = {
     id: number,
     title: string,
-    link: string
+    link?: string
 }

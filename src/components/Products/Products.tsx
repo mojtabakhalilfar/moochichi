@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ProductHome from '../home/ProductHome'
-import { TCategoris, TMostPopular } from '@/types/Type'
+import { TMostPopular } from '@/types/Type'
 
 const Products = async ({ className, products ,category }: { className: React.ReactNode, products: TMostPopular[],category:string }) => {
 

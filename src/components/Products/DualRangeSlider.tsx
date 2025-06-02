@@ -7,12 +7,16 @@ function valuetext(value: number) {
   return `${value}°C`;
 }
 
-export default function RangeSlider() {
+export default function RangeSlider({handleMin , handleMax}:{handleMin:(key:string , min:number)=>void , handleMax:(key:string , max:number)=>void}) {
   const [value, setValue] = React.useState<number[]>([2000, 3700]);
 
   const handleChange = (event: Event, newValue: number[]) => {
     setValue(newValue);
   };
+  React.useEffect(()=>{
+    handleMin("minPrice",value[0])
+    handleMax("maxPrice",value[1])
+  },[value])
 
   return (
     <Box sx={{ width: 300 }}>

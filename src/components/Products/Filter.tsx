@@ -11,9 +11,27 @@ type FilterProps = {
   sendData: (value: string) => void;
 };
 
+type FState = {
+  minPrice: number,
+  maxPrice: number,
+  issExit: boolean,
+  category: string,
+  color: string
+
+}
 const Filter = ({ className, sendData }: FilterProps) => {
   const [show, setShow] = useState(false);
+  const [data, setData] = useState({
+    minPrice: 0,
+    maxPrice: 100000,
+    issExit: true,
+    category: "",
+    color: ""
 
+  })
+const handleState = (key: string, value: any) => {
+  setData(prev => ({ ...prev, [key]: value }));
+};
   return (
     <div dir='rtl' className={`${className} h-auto relative`}>
       <div className='flex sm:justify-between px-8'>
@@ -29,16 +47,16 @@ const Filter = ({ className, sendData }: FilterProps) => {
       </div>
       <div className={`w-full sm:flex flex-col items-start space-y-2 py-4 ${show ? "flex" : "hidden"} absolute sm:static top-8 bg-white z-20 border border-gray-200`}>
         <div className='flex flex-col w-[85%] h-auto bg-[#fafafa] rounded-[12px] p-4'>
-          <DualRangeSlider />
+          <DualRangeSlider handleMin={handleState} handleMax={handleState} />
         </div>
         <div className='flex flex-col w-[85%] bg-[#fafafa] rounded-[12px] p-4'>
-          <Isexist />
+          <Isexist handleIseExist={handleState}/>
         </div>
         <div className='flex flex-col w-[85%] bg-[#fafafa] rounded-[12px] p-4'>
-          <Category />
+          <Category handleCategory={handleState}/>
         </div>
         <div className='flex flex-col w-[85%] bg-[#fafafa] rounded-[12px] p-4'>
-          <Color />
+          <Color handleColor={handleState}/>
         </div>
       </div>
     </div>
