@@ -85,7 +85,9 @@ export type TMostPopular = {
     image: string,
     firstPrice?: number,
     finalPrice?: number,
-
+    isExit?: boolean,
+    category?: string,
+    color?: string,
 }
 
 export type TCategory = {
@@ -145,15 +147,15 @@ export type TProductText = {
 
 // types/Type.ts
 export type CommentType = {
-  id: number
-  parentId: number | null
-  text: string
-  createdAt: string
-  writer?: string
-  phone?: string
-  image?: string
-  like?: number
-  dislike?: number
+    id: number
+    parentId: number | null
+    text: string
+    createdAt: string
+    writer?: string
+    phone?: string
+    image?: string
+    like?: number
+    dislike?: number
 }
 
 export type TList = {
@@ -161,3 +163,8 @@ export type TList = {
     title: string,
     link?: string
 }
+
+// export type TFilter = {
+//     key: string ,
+//     value : any
+// }

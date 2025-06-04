@@ -1,7 +1,7 @@
 // components/Products/FilterClientWrapper.tsx
 "use client"
 
-import Filter from './Filter'
+import Filter, { FState } from './Filter'
 import Sort from './Sort'
 import Products from './Products'
 import { TCategoris } from '@/types/Type'
@@ -10,12 +10,24 @@ import { useState } from 'react'
 export default function FilterClientWrapper({ data, category }: { data: TCategoris, category: string }) {
   const [filteredData, setFilteredData] = useState(data[category])
 
-  const handleFilter = (value: string) => {
-    console.log("From child:", value)
-    // 🔻 مثلاً فیلتر بر اساس name یا color انجام بده
-    const newData = data[category].filter(item => item.title.includes(value))
-    setFilteredData(newData)
-  }
+const handleFilter = (filterState: FState) => {
+  console.log(filterState)
+  console.log(data[category][0])
+//   const newFilteredData = data[category].filter(product => {
+//     return (
+//       (product.finalPrice || 100000) >= filterState.minPrice &&
+//       (product.finalPrice || 0) <= filterState.maxPrice &&
+//       (filterState.category === "" || product.category === filterState.category) &&
+//       (filterState.color === "" || product.color === filterState.color) &&
+//       (filterState.isExit ? product.isExit === true : true)
+//     );
+//   }
+
+// );
+
+//   setFilteredData(newFilteredData);
+};
+
 
   return (
     <>
