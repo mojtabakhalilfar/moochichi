@@ -1,5 +1,5 @@
-import { count } from 'console'
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import PI_SelectedColor from './PI_SelectedColor'
 import { PI_AddToCart } from './PI_AddToCart'
 import { TProductText } from '@/types/Type'
@@ -8,6 +8,12 @@ import { IoShieldCheckmark } from 'react-icons/io5'
 
 
 const PI_text = ({product}:{product :TProductText}) => {
+    const [selectedColor , setSelectedColor]=useState<number>()
+    // let selectedColor
+    const selectedColorfunc =(colorID:number)=>{
+        // selectedColor=colorID
+        setSelectedColor(colorID)
+    }
 
 
     return (
@@ -27,8 +33,8 @@ const PI_text = ({product}:{product :TProductText}) => {
                     }
                 </div>
             </div>
-            <PI_SelectedColor colors={product?.colors} key={product?.id} />
-            <PI_AddToCart id={product.id}/>
+            <PI_SelectedColor colors={product?.colors} selectedfunc={selectedColorfunc}/>
+            <PI_AddToCart id={product.id} colorId={selectedColor ? selectedColor : 1}/>
             <div className='absolute left-0 sm:left-[15%] top-0 sm:top-[20%] flex flex-col items-end text-[12px] sm:text-[14px] space-y-2'>
                 <span className='flex items-center'>امتیاز : {4.5} <FaStar className='w-5 h-5 text-yellow-600'/></span>
                 <span className='flex'>ضمانت اصالت و کیفیت کالا <IoShieldCheckmark className='w-5 h-5 text-blue-600'/></span>

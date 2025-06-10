@@ -1,8 +1,11 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-const PI_SelectedColor = ({colors}:{colors:Array<{ id: number, title: string, code: string }>}) => {
+const PI_SelectedColor = ({colors , selectedfunc}:{colors:Array<{ id: number, title: string, code: string }> , selectedfunc:(colorId:number)=>void}) => {
     const [selected , setSelected]=useState<number>(1)
+    useEffect(()=>{
+      selectedfunc(selected)
+    },[selected])
   return (
     <div className='my-4'>
       <span className='font-medium text-[16px] text-[#14151b] leading-[180%]'>انتخاب رنگ</span>
