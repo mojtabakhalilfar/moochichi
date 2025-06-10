@@ -51,10 +51,9 @@ const Header = () => {
                     <Search />
                 </div>
                 <div className='flex justify-between space-x-1'>
-
-                    <button className='btn-header'>
+                    <a href='/cart' className='btn-header'>
                         <CiShoppingCart className='w-8 aspect-square ' />
-                    </button>
+                    </a>
                     <button className='btn-header'>
                         <CiUser className='w-8 aspect-square' />
                     </button>

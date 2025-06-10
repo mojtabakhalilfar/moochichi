@@ -11,8 +11,8 @@ export default function FilterClientWrapper({ data, category }: { data: TCategor
   const [filteredData, setFilteredData] = useState(data[category])
 
 const handleFilter = (filterState: FState) => {
-  console.log(filterState)
-  console.log(data[category][0])
+  // console.log(filterState)
+  // console.log(data[category][0])
 //   const newFilteredData = data[category].filter(product => {
 //     return (
 //       (product.finalPrice || 100000) >= filterState.minPrice &&

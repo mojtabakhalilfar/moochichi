@@ -1,5 +1,5 @@
 "use client"
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 export type TCartItem = {
     id: number
@@ -10,7 +10,7 @@ export type TCartContext = {
     cartItems: TCartItem[] | null
     getProduct: (id: number) => number
     handleIncreaseProduct: (id: number) => void
-    handleDescreaseProduct: (id: number) => void
+    handleDescreaseProduct: (id: number) => void 
     handleClearCart: (id: number) => void
     handleAddToCart: (id: number) => void
     handleRemoveFromCart: (id: number) => void
@@ -25,7 +25,18 @@ export const useShopingCartContext = () => {
 
 export const ShopingCartContextLayout = ({ children }: { children: React.ReactNode }) => {
     const [cartItems, setCartItems] = useState<TCartItem[]>([])
+    console.log(cartItems)
 
+    useEffect(()=>{
+        const storedData=localStorage.getItem("cartItem-stored")
+        if (storedData){
+            setCartItems(JSON.parse(storedData))
+        }
+    },[])
+
+    useEffect(()=>{
+        localStorage.setItem("cartItem-stored",JSON.stringify(cartItems))
+    },[cartItems])
     const handleClearCart = () => {
         setCartItems([])
     }
@@ -71,6 +82,7 @@ export const ShopingCartContextLayout = ({ children }: { children: React.ReactNo
     }
     const handleAddToCart=(id:number)=>{
         setCartItems(current=>[...current,{id:id , count:1}])
+        console.log(id)
     }
     const handleRemoveFromCart=(id:number)=>[
         setCartItems(current=>{
