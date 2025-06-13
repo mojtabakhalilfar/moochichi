@@ -3,6 +3,8 @@ export type TProduct = {
     title: string
     tag: string
     count: number
+    finalPrice?:number
+    firstPrice?:number
     description: string
 
     image: {
@@ -162,6 +164,12 @@ export type TList = {
     id: number,
     title: string,
     link?: string
+}
+
+export type TProductCart = {
+    id: number
+    count: number
+    color: number
 }
 
 // export type TFilter = {

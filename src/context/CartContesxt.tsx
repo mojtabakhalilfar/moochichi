@@ -72,7 +72,7 @@ export const ShopingCartContextLayout = ({ children }: { children: React.ReactNo
         setCartItems((current) => {
             let isLastOne = current.find(item => item.id == id && item.color == colorId)?.count == 1
             if (isLastOne) {
-                return current.filter(item => item.id != 1 && item.color == colorId)
+                return current.filter(item => item.id != 1 && item.color != colorId)
             } else {
                 return current.map((item) => {
                     if (item.id == id && item.color == colorId) {
@@ -90,7 +90,7 @@ export const ShopingCartContextLayout = ({ children }: { children: React.ReactNo
     }
     const handleRemoveFromCart = (id: number, colorId: number) => [
         setCartItems(current => {
-            return current.filter(item => item.id != id && item.color == colorId)
+            return current.filter(item => item.id != id || item.color != colorId)
         })
     ]
     return (
