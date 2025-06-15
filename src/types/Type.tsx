@@ -3,10 +3,9 @@ export type TProduct = {
     title: string
     tag: string
     count: number
-    finalPrice?:number
-    firstPrice?:number
+    finalPrice:number
+    firstPrice:number
     description: string
-
     image: {
         id: number
         image: string
@@ -170,9 +169,15 @@ export type TProductCart = {
     id: number
     count: number
     color: number
+    calc : (count:number , price:number )=>void
 }
 
 // export type TFilter = {
 //     key: string ,
 //     value : any
 // }
+
+export type TCodeOffer = {
+  code:string
+  amount : number
+}

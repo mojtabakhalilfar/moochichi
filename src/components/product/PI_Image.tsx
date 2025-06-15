@@ -15,13 +15,6 @@ const PI_Image = ({images}:{images:TButtons[]}) => {
     { id: 4, image: '/assets/product/notification-bing.png' },
   ]
 
-  // const images: TButtons[] = [
-  //   { id: 0, image: '/assets/product/image5.png' },
-  //   { id: 1, image: '/assets/product/image1.png' },
-  //   { id: 2, image: '/assets/product/image2.png' },
-  //   { id: 3, image: '/assets/product/image3.png' },
-  //   { id: 4, image: '/assets/product/image4.png' },
-  // ]
 
   const functionButton = (e: number) => {
 
@@ -43,18 +36,12 @@ const PI_Image = ({images}:{images:TButtons[]}) => {
         </div>
       </div>
       <div className=' h-full flex sm:flex-col items-center space-x-1 sm:space-x-0 sm:space-y-1 justify-evenly sm:px-4 sm:py-[10%]'>
-        {/* <button>
-          <img className='h-6 w-6 hidden sm:flex' src="/assets/icons/arrow-square-down.png" alt="" />
-        </button> */}
+
         {images &&
           images.map((item, index) => (
             <img onClick={() => setSelected(item.id)} className={`w-[72px] sm:w-[88px] aspect-square rounded-[9px] ${index > 2 ? "hidden" : "flex"} ${index > 3 ? "sm:hidden" : "sm:flex"}`} src={item.image} alt={`image${item.id}`} key={item.id}/>
           ))
         }
-        {/* <button className={`w-[72px] aspect-square rounded-[9px] bg-red-500 sm:hidden`}></button>
-        <button>
-          <img className='h-6 w-6 hidden sm:flex  rotate-180' src="/assets/icons/arrow-square-down.png" alt="" />
-        </button> */}
       </div>
     </div>
   )

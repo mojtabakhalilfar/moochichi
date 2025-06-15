@@ -1051,6 +1051,8 @@
   ],
   "product": [
     {
+      "finalPrice": 100000,
+      "firstPrice": 110000,
       "image": [
         {
           "id": 0,
@@ -1139,6 +1141,8 @@
       ]
     },
     {
+      "finalPrice": 100000,
+      "firstPrice": 110000,
       "image": [
         {
           "id": 0,
@@ -1227,6 +1231,8 @@
       ]
     },
     {
+      "finalPrice": 100000,
+      "firstPrice": 110000,
       "image": [
         {
           "id": 0,
@@ -1315,6 +1321,8 @@
       ]
     },
     {
+      "finalPrice": 100000,
+      "firstPrice": 110000,
       "image": [
         {
           "id": 0,
@@ -1403,6 +1411,8 @@
       ]
     },
     {
+      "finalPrice": 100000,
+      "firstPrice": 110000,
       "image": [
         {
           "id": 0,
@@ -1491,6 +1501,8 @@
       ]
     },
     {
+      "finalPrice": 100000,
+      "firstPrice": 110000,
       "image": [
         {
           "id": 0,
@@ -1579,6 +1591,8 @@
       ]
     },
     {
+      "finalPrice": 100000,
+      "firstPrice": 110000,
       "image": [
         {
           "id": 0,
@@ -1667,6 +1681,8 @@
       ]
     },
     {
+      "finalPrice": 100000,
+      "firstPrice": 110000,
       "image": [
         {
           "id": 0,
@@ -1755,6 +1771,8 @@
       ]
     },
     {
+      "finalPrice": 100000,
+      "firstPrice": 110000,
       "image": [
         {
           "id": 0,
@@ -1843,6 +1861,8 @@
       ]
     },
     {
+      "finalPrice": 100000,
+      "firstPrice": 110000,
       "image": [
         {
           "id": 0,

@@ -26,7 +26,6 @@ export const useShopingCartContext = () => {
 
 export const ShopingCartContextLayout = ({ children }: { children: React.ReactNode }) => {
     const [cartItems, setCartItems] = useState<TCartItem[]>([])
-    console.log(cartItems)
 
     useEffect(() => {
         const storedData = localStorage.getItem("cartItem-stored")
@@ -86,7 +85,6 @@ export const ShopingCartContextLayout = ({ children }: { children: React.ReactNo
     }
     const handleAddToCart = (id: number, colorId: number) => {
         setCartItems(current => [...current, { id: id, count: 1, color: colorId }])
-        console.log(id)
     }
     const handleRemoveFromCart = (id: number, colorId: number) => [
         setCartItems(current => {
