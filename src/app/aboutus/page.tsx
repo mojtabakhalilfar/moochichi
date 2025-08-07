@@ -1,8 +1,9 @@
-import WhyUs, {TContact } from '@/components/home/WhyUs'
+import WhyUs from '@/components/home/WhyUs'
+import {TBestchoice} from '../../types/Type'
 import React from 'react'
 
 export default function page() {
-    const data: TContact[] = [
+    const data: TBestchoice[] = [
         { id: 1, title: "ماموریت ما", icon: "/assets/aboutUs/Vector1.png", description: "هدف موچی‌چی ایجاد دنیایی شاد و رنگارنگ است. این فروشگاه با ارائه محصولات فانتزی و خاص، سعی در زیباسازی زندگی روزمره مشتریان دارد. موچی‌چی به دنبال ایجاد تجربه‌ای متفاوت است که بتواند لحظاتی شاد و خلاقانه برای مشتریان خود به ارمغان بیاورد." },
         { id: 2, title: "چشم انداز ما", icon: "/assets/aboutUs/Vector2.png", description: "تبدیل شدن به برندی الهام‌بخش در ایران و منطقه که با محصولات فانتزی و منحصربه‌فرد خود، لحظات شادی و خلاقیت را به زندگی مشتریان وارد می‌کند و دنیایی رنگارنگ را در خانه و محل کار افراد ایجاد می‌کند" },
     ]
