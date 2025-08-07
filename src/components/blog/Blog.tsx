@@ -1,4 +1,4 @@
-import { TBlog, TParams } from '@/types/Type'
+import { TBlog} from '@/types/Type'
 import React from 'react'
 
 const Blog = async ({ id }: { id: string }) => {
@@ -6,21 +6,6 @@ const Blog = async ({ id }: { id: string }) => {
 
     const result = await fetch(`http://localhost:8000/blog/${id}`)
     const data = await result.json() as TBlog
-    // try {
-    //     const result = await fetch(`http://localhost:8000/blog/`)
-
-    //     if (!result.ok) {
-    //         throw new Error("پست پیدا نشد!")
-    //     }
-
-    //     const data = await result.json() as TBlog
-    //     console.log(data)
-
-    // } catch (error) {
-    //     console.error("خطا در دریافت پست:", error)
-    // }
-
-
     return (
         <div className='flex flex-col items-center justify-evenly w-full h-auto space-y-8'>
             <img className='w-[310px] h-[190px] rounded-[22px] sm:w-full sm:h-auto sm:aspect-[13/6] object-cover' src="/assets/blog/image1.png" alt="" />

@@ -1,4 +1,4 @@
-import { TMostPopular, TProductHome } from '@/types/Type'
+import { TProductHome } from '@/types/Type'
 import Link from 'next/link'
 import React from 'react'
 import { FaCartShopping } from 'react-icons/fa6'

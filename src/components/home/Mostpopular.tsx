@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import { TMenu } from '../Header'
+import {TCategory} from '../../types/Type'
 import ProductHome from './ProductHome'
 import MostpopularClient from './MostpopularClient'
 import { TMostPopular } from '@/types/Type'
@@ -18,7 +18,7 @@ const Mostpopular = async() => {
 
     // ]
 
-    const menu: TMenu[] = [
+    const menu: TCategory[] = [
         { id: 1, title: "همه محصولات", link: "/stationery", },
         { id: 2, title: "لوازم تحریر", link: "/stationery", },
         { id: 3, title: "دکوری خاص", link: "/special", },

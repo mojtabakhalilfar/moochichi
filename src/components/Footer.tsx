@@ -26,7 +26,7 @@ export default function Footer() {
                 <section className='grid grid-cols-2 gap-x-10 my-4 sm:flex sm:list-none'>
                     {
                         list.map((items) => (
-                            <Link key={items.id} className='text-[16px]' href={items.link}><li>{items.title}</li></Link>
+                            <Link key={items.id} className='text-[16px]' href={items.link||""}><li>{items.title}</li></Link>
                         ))
                     }
                 </section>

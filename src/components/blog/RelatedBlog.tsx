@@ -1,9 +1,9 @@
 import React from 'react'
-import { TBlog } from '../blogs/Blogs'
+import { TBlogs } from '../../types/Type'
 import BlogInBlogs from '../blogs/BlogInBlogs'
 
 const RelatedBlog = () => {
-    const mostpopular: TBlog[] = [
+    const mostpopular: TBlogs[] = [
         { id: 1, title: "مزایای خرید اینترنتی لوازم تحریر", tags: ["آموزشی"], image: "/assets/blog/image1.png" },
         { id: 2, title: "مزایای خرید اینترنتی لوازم تحریر", tags: ["آموزشی"], image: "/assets/blog/image2.png" },
         { id: 3, title: "مزایای خرید اینترنتی لوازم تحریر", tags: ["آموزشی"], image: "/assets/blog/image3.png" },

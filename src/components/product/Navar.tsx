@@ -1,4 +1,4 @@
-import { TCategory, TMostPopular } from '@/types/Type'
+import { TMostPopular } from '@/types/Type'
 import React from 'react'
 
 

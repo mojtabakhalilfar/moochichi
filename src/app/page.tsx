@@ -13,7 +13,7 @@ export default function Home() {
       <Mostpopular/>
       <Banners/>
       <Discount/>
-      <WhyUs children></WhyUs>
+      <WhyUs children=""></WhyUs>
       <Article/>
     </div>
   );

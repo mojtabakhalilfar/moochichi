@@ -1,4 +1,4 @@
-import WhyUs, { Answer, TContact } from '@/components/home/WhyUs'
+import WhyUs, {TContact } from '@/components/home/WhyUs'
 import React from 'react'
 
 export default function page() {

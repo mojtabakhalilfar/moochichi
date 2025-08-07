@@ -28,7 +28,7 @@ const Sort = ({ className , number}: { className: React.ReactNode , number:numbe
                 <span key={item.id} className={`${item.id == selected ? show?"hidden":"flex" : "hidden"} text-nowrap sm:hidden  absolute sm:static top-0 right-10`}>{item.title}</span>
               ))
             }
-          <div className='flex flex-col sm:flex-row  absolute sm:static top-4 right-0 bg-amber-50 sm:bg-none'>
+          <div className='flex flex-col sm:flex-row  absolute sm:static top-4 right-0 bg-amber-50 sm:bg-none px-4 py-2'>
             <span className='hidden sm:flex text-nowrap'>مرتب سازی :  </span>
             <div className={`${show?"flex":"hidden"} sm:flex flex-col sm:flex-row items-center`}>
             {
