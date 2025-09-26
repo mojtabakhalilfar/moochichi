@@ -9,9 +9,7 @@ import { IoShieldCheckmark } from 'react-icons/io5'
 
 const PI_text = ({product}:{product :TProductText}) => {
     const [selectedColor , setSelectedColor]=useState<number>()
-    // let selectedColor
     const selectedColorfunc =(colorID:number)=>{
-        // selectedColor=colorID
         setSelectedColor(colorID)
     }
 

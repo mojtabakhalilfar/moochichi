@@ -4,7 +4,8 @@ import React from 'react'
 const Blog = async ({ id }: { id: string }) => {
 
 
-    const result = await fetch(`http://localhost:8000/blog/${id}`)
+    // const result = await fetch(`http://localhost:8000/blog/${id}`)
+    const result = await fetch(`https://mochichi-json-api.onrender.com/blog/${id}`)
     const data = await result.json() as TBlog
     return (
         <div className='flex flex-col items-center justify-evenly w-full h-auto space-y-8'>

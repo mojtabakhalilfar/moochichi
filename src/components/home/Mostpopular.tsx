@@ -7,7 +7,8 @@ import { TMostPopular } from '@/types/Type'
 
 
 const Mostpopular = async() => {
-    const result = await fetch("http://localhost:8000/mostpopular")
+    // const result = await fetch("http://localhost:8000/mostpopular")
+    const result = await fetch("https://mochichi-json-api.onrender.com/mostpopular")
     const mostpopular = await result.json() as TMostPopular[]
     // const mostpopular: TMostPopular[] = [
     //     { id: 1, title: "چراغ خواب خوک", image: "/assets/most popular/image5.png", firstPrice: 1200000, finalPrice: 976000, },

@@ -11,7 +11,8 @@ const Discount = () => {
     const [showProduct, setShowProduct] = useState(1)
 
     useEffect(() => {
-        axios.get("http://localhost:8000/discount").then((res) => {
+        // axios.get("http://localhost:8000/discount").then((res) => {
+        axios.get("https://mochichi-json-api.onrender.com/discount").then((res) => {
             setData(res.data)
         })
     },[])

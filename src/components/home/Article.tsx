@@ -3,7 +3,8 @@ import Link from 'next/link'
 import React from 'react'
 
 const  Article = async() => {
-    const result = await fetch("http://localhost:8000/articleHome")
+    // const result = await fetch("http://localhost:8000/articleHome")
+    const result = await fetch("https://mochichi-json-api.onrender.com/articleHome")
     const article = await result.json() as TBlog[]
     console.log(article)
     // const article:TArticle[] = [

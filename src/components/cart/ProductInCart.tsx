@@ -31,7 +31,8 @@ const ProductInCart = ({ id, count, color, calc }: TProductCart) => {
     }, [data , count])
     useEffect(() => {
         const fetchProduct = async () => {
-            const res = await axios.get(`http://localhost:8000/product?id=${id}`)
+            // const res = await axios.get(`http://localhost:8000/product?id=${id}`)
+            const res = await axios.get(`https://mochichi-json-api.onrender.com/product?id=${id}`)
             setData(res.data[0])
         }
         fetchProduct()

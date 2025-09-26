@@ -12,7 +12,8 @@ const Blogs = () => {
 
     // گرفتن داده‌ها از سرور فقط یک بار
     useEffect(() => {
-        axios.get("http://localhost:8000/blogs")
+        // axios.get("http://localhost:8000/blogs")
+        axios.get("https://mochichi-json-api.onrender.com/blogs")
             .then((result) => {
                 setAllArticles(result.data);
             })

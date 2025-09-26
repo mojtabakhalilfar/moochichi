@@ -6,7 +6,8 @@ const NewBolg = async () => {
 
 
     
-    const result = await fetch(`http://localhost:8000/newblog`)
+    // const result = await fetch(`http://localhost:8000/newblog`)
+    const result = await fetch(`https://mochichi-json-api.onrender.com/newblog`)
     const article = await result.json() as TBlog
     return (
         <div className='flex flex-col items-start w-full '>

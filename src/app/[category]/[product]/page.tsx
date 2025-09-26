@@ -13,7 +13,8 @@ const page = async ({ params }: TPParams) => {
 
   const { product } = await params
   const id: number = parseInt(product) % 11
-  const result = await fetch(`http://localhost:8000/product?id=${id}`)
+  // const result = await fetch(`http://localhost:8000/product?id=${id}`)
+  const result = await fetch(`https://mochichi-json-api.onrender.com/product?id=${id}`)
   const data = (await result.json())[0] as TProduct
   return (
     <div className='flex items-center justify-center w-full'>
@@ -22,7 +23,8 @@ const page = async ({ params }: TPParams) => {
         <Navar />
         <AboutProduct />
         <RelatedProduct mostpopular={data?.relatedproducts}/>
-        <Comments api='http://localhost:8000/commentsP' productId={id} />
+        {/* <Comments api='http://localhost:8000/commentsP' productId={id} /> */}
+        <Comments api='https://mochichi-json-api.onrender.com/commentsP' productId={id} />
       </div>
     </div>
   )

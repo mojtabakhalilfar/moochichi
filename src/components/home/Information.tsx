@@ -5,7 +5,8 @@ import { TCategory } from '@/types/Type'
 
 
 const Information = async() => {
-    const result = await fetch("http://localhost:8000/category")
+    // const result = await fetch("http://localhost:8000/category")
+    const result = await fetch("https://mochichi-json-api.onrender.com/category")
     const menu = await result.json() as TCategory[]
     // const menu: TCategory[] = [
     //     { id: 2, title: "لوازم تحریر", link: "/stationery", image: "/assets/category/pen.png" },

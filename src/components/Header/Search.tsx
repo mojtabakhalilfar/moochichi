@@ -13,7 +13,8 @@ const Search = () => {
     const fetchProducts = async () => {
       if (text.length > 2) {
         try {
-          const response = await fetch(`http://localhost:8000/product?title_like=${text}&_limit=5`)
+          // const response = await fetch(`http://localhost:8000/product?title_like=${text}&_limit=5`)
+          const response = await fetch(`https://mochichi-json-api.onrender.com/product?title_like=${text}&_limit=5`)
           const data = await response.json()
           setResults(data)
         } catch (error) {

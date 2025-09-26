@@ -3,7 +3,8 @@ import { TCategoris, TCParams } from "@/types/Type"
 
 export default async function Page({ params }: TCParams) {
   const { category } =await params
-  const result = await fetch("http://localhost:8000/categoris", { cache: "no-store" }) // جلوگیری از کش شدن
+  // const result = await fetch("http://localhost:8000/categoris", { cache: "no-store" }) // جلوگیری از کش شدن
+  const result = await fetch("https://mochichi-json-api.onrender.com/categoris", { cache: "no-store" }) // جلوگیری از کش شدن
   const data = (await result.json()) as TCategoris
 
   return (
