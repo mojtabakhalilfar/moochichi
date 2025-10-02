@@ -48,7 +48,7 @@ const Discount = () => {
                     </button>
                     {data &&
                         data.map((items) => (
-                            <div key={items.id} className={`${items.id == showProduct ? "flex" : "hidden sm:flex"}`}>
+                            <div key={items.id} className={`${items.id == showProduct ? "flex" : "hidden sm:flex"} transition-all duration-700 ease-in-out`}>
                                 <ProductHome
                                     id={items.id}
                                     // finalPrice={items.finalPrice}

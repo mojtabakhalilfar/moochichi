@@ -14,7 +14,7 @@ const ShowMenu = ({menu}:{menu:TCategory[]}) => {
             </div>
             <div className={`${showNavbar ? "flex" : "hidden"} flex-col items-center w-full absolute top-12 bg-[#30303d]`}>
                 {menu.map((items) => (
-                    <div className='w-full text-center my-2' key={items.id}><Link className={`w-full text-[14px]  hover:text-white ${pathName==items.link ?"text-blue-500":"text-[#acacb1]"}`} href={items.link}>{items.title}</Link></div>
+                    <div onClick={() => setShowNavbar(!showNavbar)} key={items.id}><Link className={`w-full text-center my-2 text-[14px] hover:text-white ${pathName==items.link ?"text-blue-500":"text-[#acacb1]"}`} href={items.link}>{items.title}</Link></div>
                 ))}
             </div>
         </div>

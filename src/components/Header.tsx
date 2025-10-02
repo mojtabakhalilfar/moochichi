@@ -34,7 +34,12 @@ const Header = () => {
                     <div className='w-10 h-4 bg-[#ff6687] rounded-[19px]'></div>
                     <img className='w-[82px] h-5' src="/assets/icons/logo.png" alt="" />
                 </div>
-                <button className='w-12 aspect-square rounded-[48px] bg-[ec6880] flex items-center justify-center'><img className='w-5 aspect-square' src="/assets/icons/cart.png" alt="" /></button>
+                {/* <button className='w-12 aspect-square rounded-[48px] bg-[ec6880] flex items-center justify-center'>
+                    <img className='w-5 aspect-square' src="/assets/icons/cart.png" alt="" />
+                </button> */}
+                <a href='/cart' className='w-10 my-0.5 aspect-square rounded-[48px] bg-[#ec6880] flex items-center justify-center text-white'>
+                    <CiShoppingCart className='w-5 aspect-square' />
+                </a>
             </div>
             <Search />
             <ShowMenu menu={menu} />
@@ -64,7 +69,7 @@ const Header = () => {
 
                     {menu.map((items) => (
                         <div className='text-white w-full text-center flex items-center' key={items.id}>
-                            <Link className={`w-full text-[14px] hover:text-white ${pathName == items.link? "text-blue-500":"text-[#acacb1]"}`} href={items.link}>{items.title}</Link>
+                            <Link className={`w-full text-[14px] hover:text-white ${pathName == items.link ? "text-blue-500" : "text-[#acacb1]"}`} href={items.link}>{items.title}</Link>
                             <div className='bg-[#535361] w-[5px] h-[5px] rounded-full'></div>
                         </div>
 
