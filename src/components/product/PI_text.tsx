@@ -25,8 +25,8 @@ const PI_text = ({product}:{product :TProductText}) => {
                 <div className='flex flex-col space-y-2 sm:space-y-3'>
                     <span className='font-medium text-[16px] text-[#14151b] leading-[180%] sm:mb-1'>ویژگی های محصول</span>
                     {
-                        product && product.features.map((item) => (
-                            <span className='font-medium text-[12px] sm:text-[12px] text-[#606060] leading-[180%]'>{item}</span>
+                        product && product.features.map((item , index) => (
+                            <span key={index} className='font-medium text-[12px] sm:text-[12px] text-[#606060] leading-[180%]'>{item}</span>
                         ))
                     }
                 </div>

@@ -15,7 +15,7 @@ const Discount = () => {
         axios.get("https://mochichi-json-api.onrender.com/discount").then((res) => {
             setData(res.data)
         })
-    },[])
+    }, [])
     const discount: TMostPopular[] = [
         { id: 1, title: "چراغ خواب خوک", image: "/assets/most popular/image5.png", firstPrice: 1200000, finalPrice: 976000, },
         { id: 2, title: "چراغ خواب خوک", image: "/assets/most popular/image6.png", firstPrice: 1200000, finalPrice: 976000, },
@@ -43,7 +43,9 @@ const Discount = () => {
                     <Time />
                 </div>
                 <div className='flex items-center justify-around w-[70%] sm:w-[90%] text-white space-x-4'>
-                    <button className='sm:hidden' onClick={next}>n</button>
+                    <button className='sm:hidden w-10 aspect-square rounded-full bg-white flex justify-center items-center' onClick={next}>
+                        <img className='h-[10px] w-[10px]' src="/assets/icons/next-svgrepo-com.svg" alt="" />
+                    </button>
                     {data &&
                         data.map((items) => (
                             <div key={items.id} className={`${items.id == showProduct ? "flex" : "hidden sm:flex"}`}>
@@ -58,7 +60,9 @@ const Discount = () => {
                             </div>
                         ))
                     }
-                    <button className='sm:hidden' onClick={preve}>p</button>
+                    <button className='sm:hidden w-10 aspect-square rounded-full bg-white flex justify-center items-center' onClick={preve}>
+                        <img className='h-[10px] w-[10px]' src="/assets/icons/previous-svgrepo-com.svg" alt="" />
+                    </button>
                 </div>
             </div>
         </div>
