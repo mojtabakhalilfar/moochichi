@@ -21,7 +21,7 @@ export default function RangeSlider({handleMin , handleMax}:{handleMin:(key:stri
   return (
     <Box sx={{ width: 300 }}>
       <Slider
-        sx={{width:"90%" , color: '#ff6687' }}
+        sx={{width:"60%" , color: '#ff6687' }}
         min={1000}
         max={10000}
         getAriaLabel={() => 'Temperature range'}
@@ -30,11 +30,11 @@ export default function RangeSlider({handleMin , handleMax}:{handleMin:(key:stri
         valueLabelDisplay="auto"
         getAriaValueText={valuetext}
       />
-      <div dir="rtl" className="flex items-center mt-4 space-x-3">
+      <div dir="rtl" className="flex items-center mt-4 space-x-3 w-4/5">
         <label htmlFor="">از قیمت : </label>
         <input value={value[0]} onChange={(e) => setValue([Number(e.target.value), value[1]])} className="outline-[#ff6687] bg-[#f8f9fb] rounded-[8px] w-[70%] px-4 py-2" type="text" />
       </div>
-      <div dir="rtl" className="flex items-center mt-4 space-x-3">
+      <div dir="rtl" className="flex items-center mt-4 space-x-3 w-4/5">
         <label htmlFor="">تا قیمت : </label>
         <input value={value[1]} onChange={(e) => setValue([value[0], Number(e.target.value)])} className="outline-[#ff6687] bg-[#f8f9fb] rounded-[8px] w-[70%] px-4 py-2" type="text" />
       </div>
