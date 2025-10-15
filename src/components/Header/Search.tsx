@@ -41,7 +41,7 @@ const Search = () => {
         <FiSearch className='w-5 h-5 opacity-40'/>
       </button>
 
-{results.length > 0 && (
+{/* {results.length > 0 && (
   <div className='absolute top-full mt-2 bg-white rounded-xl shadow-xl w-full max-h-80 overflow-y-auto z-50 border border-gray-200'>
     {results.map((item) => (
       <Link href={`/pproduct/${item.id}`} onClick={()=>setText("")}
@@ -62,7 +62,7 @@ const Search = () => {
       </Link>
     ))}
   </div>
-)}
+)} */}
 
     </div>
   )

@@ -29,14 +29,9 @@ const Header = () => {
     const HeaderMobile =
         <div className='w-full flex flex-col items-center justify-center relative'>
             <div className='flex items-center justify-between w-[342px] h-[48px]'>
-
                 <div className='flex'>
-                    <div className='w-10 h-4 bg-[#ff6687] rounded-[19px]'></div>
                     <img className='w-[82px] h-5' src="/assets/icons/logo.png" alt="" />
                 </div>
-                {/* <button className='w-12 aspect-square rounded-[48px] bg-[ec6880] flex items-center justify-center'>
-                    <img className='w-5 aspect-square' src="/assets/icons/cart.png" alt="" />
-                </button> */}
                 <a href='/cart' className='w-10 my-0.5 aspect-square rounded-[48px] bg-[#ec6880] flex items-center justify-center text-white'>
                     <CiShoppingCart className='w-5 aspect-square' />
                 </a>
