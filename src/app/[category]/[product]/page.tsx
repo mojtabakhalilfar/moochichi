@@ -14,8 +14,10 @@ const page = async ({ params }: TPParams) => {
   const { product } = await params
   const id: number = parseInt(product) % 11
   // const result = await fetch(`http://localhost:8000/product?id=${id}`)
-  const result = await fetch(`https://mochichi-json-api.onrender.com/product?id=${id}`)
-  const data = (await result.json())[0] as TProduct
+  const result = await fetch(`https://mochichi-json-api.onrender.com/product?id=${2}`)
+  const allData = (await result.json()) as TProduct[]
+  const data2 : TProduct[] = allData.filter(item=>item.id==id)
+  const data = data2[0]
   return (
     <div className='flex items-center justify-center w-full'>
       <div className='flex flex-col items-center w-full h-auto'>
