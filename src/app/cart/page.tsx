@@ -37,7 +37,7 @@ const page = () => {
   }
   return (
     <div className='min-h-[70vh] max-h-max flex flex-col items-center justify-center'>
-      <div className='grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 w-[90%] border border-gray-300 rounded-2xl'>
+      <div className='grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 min-h-[50vh] w-[90%] border border-gray-300 rounded-2xl'>
         {
           cartItems?.map((item) => (
             <ProductInCart calc={calculater} id={item.id} color={item.color} count={item.count} key={item.id} />

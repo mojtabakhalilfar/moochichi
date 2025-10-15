@@ -30,7 +30,7 @@ const Header = () => {
         <div className='w-full flex flex-col items-center justify-center relative'>
             <div className='flex items-center justify-between w-[342px] h-[48px]'>
                 <div className='flex'>
-                    <img className='w-[82px] h-5' src="/assets/icons/logo.png" alt="" />
+                    {/* <img className='w-[82px] h-5' src="/assets/icons/logo.png" alt="" /> */}
                 </div>
                 <a href='/cart' className='w-10 my-0.5 aspect-square rounded-[48px] bg-[#ec6880] flex items-center justify-center text-white'>
                     <CiShoppingCart className='w-5 aspect-square' />
